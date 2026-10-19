@@ -193,7 +193,7 @@
                                         <tr>
                                             <td><div class="cell-title">नवरात्रोत्सव बंदोबस्त – सातारा शहर</div></td>
                                             <td class="text-nowrap">10 ऑक्टो, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">120</td>
                                             <td class="col-num">111</td>
                                             <td class="col-num">8</td>
@@ -209,7 +209,7 @@
                                         <tr>
                                             <td><div class="cell-title">व्हीआयपी दौरा – कराड</div></td>
                                             <td class="text-nowrap">18 ऑक्टो, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">90</td>
                                             <td class="col-num">90</td>
                                             <td class="col-num">3</td>
@@ -225,7 +225,7 @@
                                         <tr>
                                             <td><div class="cell-title">दसरा मिरवणूक – फलटण</div></td>
                                             <td class="text-nowrap">20 ऑक्टो, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">60</td>
                                             <td class="col-num">50</td>
                                             <td class="col-num">2</td>
@@ -241,7 +241,7 @@
                                         <tr>
                                             <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
                                             <td class="text-nowrap">25 सप्टें, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">300</td>
                                             <td class="col-num">285</td>
                                             <td class="col-num">5</td>
@@ -286,7 +286,7 @@
 
         <!-- Filter modal -->
         <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="filterModalLabel">फिल्टर</h5>

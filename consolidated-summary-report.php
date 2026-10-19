@@ -127,7 +127,7 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">स्वीकृत</p>
                                         <h3 class="mt-1 mb-0 ff-secondary fw-semibold">536</h3>
-                                        <small class="text-muted">94%</small>
+                                        <!-- <small class="text-muted">94%</small> -->
                                     </div>
                                 </div>
                             </div><!-- end card body -->
@@ -158,7 +158,7 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">उपस्थिती</p>
                                         <h3 class="mt-1 mb-0 ff-secondary fw-semibold">16%</h3>
-                                        <small class="text-muted">9/58</small>
+                                        <!-- <small class="text-muted">9/58</small> -->
                                     </div>
                                 </div>
                             </div><!-- end card body -->
@@ -189,7 +189,7 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">नोटीस</p>
                                         <h3 class="mt-1 mb-0 ff-secondary fw-semibold">2</h3>
-                                        <small class="text-muted">खुलासा 1 · कार्यवाही 1</small>
+                                        <!-- <small class="text-muted">खुलासा 1 · कार्यवाही 1</small> -->
                                     </div>
                                 </div>
                             </div><!-- end card body -->
@@ -402,7 +402,7 @@
                                         <tr>
                                             <td><div class="cell-title">नवरात्रोत्सव बंदोबस्त – सातारा शहर</div></td>
                                             <td class="text-nowrap">10 ऑक्टो, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">120</td>
                                             <td class="col-num">111</td>
                                             <td class="col-num">8</td>
@@ -418,7 +418,7 @@
                                         <tr>
                                             <td><div class="cell-title">व्हीआयपी दौरा – कराड</div></td>
                                             <td class="text-nowrap">18 ऑक्टो, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">90</td>
                                             <td class="col-num">90</td>
                                             <td class="col-num">3</td>
@@ -434,7 +434,7 @@
                                         <tr>
                                             <td><div class="cell-title">दसरा मिरवणूक – फलटण</div></td>
                                             <td class="text-nowrap">20 ऑक्टो, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">60</td>
                                             <td class="col-num">50</td>
                                             <td class="col-num">2</td>
@@ -450,7 +450,7 @@
                                         <tr>
                                             <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
                                             <td class="text-nowrap">25 सप्टें, 2026</td>
-                                            <td><span class="status-pill pill-success">मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
                                             <td class="col-num">300</td>
                                             <td class="col-num">285</td>
                                             <td class="col-num">5</td>
@@ -808,7 +808,7 @@
                                             <td><div class="cell-title">अश्विनी जगताप</div></td>
                                             <td class="text-nowrap">25 सप्टें, 2026</td>
                                             <td>विजय मोहिते</td>
-                                            <td><span class="status-pill pill-success">कार्यवाही पूर्ण</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">कार्यवाही पूर्ण</span></td>
                                             <td class="col-num">प्राप्त</td>
                                             <td>ताकीद (समज) देऊन बंद</td>
                                         </tr>
@@ -817,7 +817,7 @@
                                             <td><div class="cell-title">प्रिया मोरे</div></td>
                                             <td class="text-nowrap">10 ऑक्टो, 2026</td>
                                             <td>राहुल शिंदे</td>
-                                            <td><span class="status-pill pill-warning">खुलासा प्रलंबित</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">खुलासा प्रलंबित</span></td>
                                             <td class="col-num">नाही</td>
                                             <td>—</td>
                                         </tr>
@@ -867,7 +867,7 @@
 
         <!-- Filter modal -->
         <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="filterModalLabel">फिल्टर</h5>

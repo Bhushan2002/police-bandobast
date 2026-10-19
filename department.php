@@ -45,7 +45,7 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                      <div class="row">
+                    <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
                                 <h4 class="mb-sm-0">विभाग</h4>
@@ -66,7 +66,7 @@
                             <h2>विभाग</h2>
                             <p>पोलीस विभाग व शाखा</p>
                         </div>
-                            <button type="button" class="btn btn-primary waves-effect waves-light d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addVibhagModal">
+                        <button type="button" class="btn btn-primary waves-effect waves-light d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addVibhagModal">
                             <span class="mdi mdi-plus"></span>
                             <span class="px-2">विभाग जोडा</span>
                         </button>
@@ -128,57 +128,67 @@
                         <div class="card-body p-0">
                             <div class="table-responsive">
                                 <table class="table data-table align-middle mb-0">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>विभागाचे नाव</th>
-                                        <th>स्थिती</th>
-                                        <th class="col-action">कृती</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><div class="cell-title">कायदा व सुव्यवस्था</div></td>
-                                        <td><span class="status-pill pill-success">सक्रिय</span></td>
-                                        <td class="col-action">
-                                            <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                            <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell-title">वाहतूक शाखा</div></td>
-                                        <td><span class="status-pill pill-success">सक्रिय</span></td>
-                                        <td class="col-action">
-                                            <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                            <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell-title">स्थानिक गुन्हे शाखा</div></td>
-                                        <td><span class="status-pill pill-success">सक्रिय</span></td>
-                                        <td class="col-action">
-                                            <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                            <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell-title">स्थानिक गुन्हे शाखा</div></td>
-                                        <td><span class="status-pill pill-success">सक्रिय</span></td>
-                                        <td class="col-action">
-                                            <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                            <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell-title">स्थानिक गुन्हे शाखा</div></td>
-                                        <td><span class="status-pill pill-success">सक्रिय</span></td>
-                                        <td class="col-action">
-                                            <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                            <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                        </td>
-                                    </tr>
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>विभागाचे नाव</th>
+                                            <th>स्थिती</th>
+                                            <th class="col-action">कृती</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="cell-title">कायदा व सुव्यवस्था</div>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
+                                            <td class="col-action">
+                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
+                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cell-title">वाहतूक शाखा</div>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
+                                            <td class="col-action">
+                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
+                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cell-title">स्थानिक गुन्हे शाखा</div>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
+                                            <td class="col-action">
+                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
+                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cell-title">स्थानिक गुन्हे शाखा</div>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
+                                            <td class="col-action">
+                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
+                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cell-title">स्थानिक गुन्हे शाखा</div>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
+                                            <td class="col-action">
+                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
+                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
+                                            </td>
+                                        </tr>
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
                                 <div class="noresult text-center py-4 d-none">
                                     <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
                                 </div>
@@ -195,6 +205,36 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Delete Confirmation Modal -->
+                    <div class="modal fade" id="deleteRecordModal" tabindex="-1" aria-labelledby="deleteRecordModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0 pb-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center px-4 pb-4 pt-0">
+                                    <div class="avatar-lg mx-auto mb-3">
+                                        <span class="avatar-title bg-danger-subtle text-danger rounded-circle fs-1">
+                                            <i class="ri-delete-bin-line"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mb-2" id="deleteRecordModalLabel">नोंद हटवायची आहे का?</h5>
+                                    <p class="text-muted mb-0">
+                                        <span class="fw-semibold text-body" id="deleteRecordName"></span> ही नोंद कायमची हटवली जाईल. ही क्रिया परत घेता येणार नाही.
+                                    </p>
+                                    <div class="d-flex justify-content-center gap-2 mt-4">
+                                        <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">रद्द करा</button>
+                                        <button type="button" class="btn btn-danger waves-effect waves-light d-flex align-items-center" id="deleteRecordConfirm">
+                                            <i class="ri-delete-bin-line"></i>
+                                            <span class="px-2">होय, हटवा</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Delete Confirmation Modal -->
 
                 </div>
                 <!-- container-fluid -->
@@ -213,10 +253,10 @@
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         // Search + pagination for the .data-table cards (card-header search box, card-footer pager)
-        (function () {
+        (function() {
             var PAGE_SIZE = 10;
 
-            document.querySelectorAll('.page-content table.data-table').forEach(function (table) {
+            document.querySelectorAll('.page-content table.data-table').forEach(function(table) {
                 var tbody = table.tBodies[0];
                 var card = table.closest('.card');
                 var scope = table.closest('.tab-pane') || card;
@@ -226,8 +266,11 @@
                 var pager = scope.querySelector('.card-footer .pagination');
                 var page = 1;
 
-                var rows = Array.prototype.map.call(tbody.rows, function (tr) {
-                    return { tr: tr, text: tr.textContent.replace(/\s+/g, ' ').toLowerCase() };
+                var rows = Array.prototype.map.call(tbody.rows, function(tr) {
+                    return {
+                        tr: tr,
+                        text: tr.textContent.replace(/\s+/g, ' ').toLowerCase()
+                    };
                 });
 
                 function pageItem(label, target, state) {
@@ -237,20 +280,24 @@
 
                 function render() {
                     var q = search ? search.value.trim().toLowerCase() : '';
-                    var matched = rows.filter(function (r) { return r.text.indexOf(q) !== -1; });
+                    var matched = rows.filter(function(r) {
+                        return r.text.indexOf(q) !== -1;
+                    });
                     var pages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
                     page = Math.min(page, pages);
                     var start = (page - 1) * PAGE_SIZE;
                     var end = Math.min(start + PAGE_SIZE, matched.length);
 
                     tbody.textContent = '';
-                    matched.slice(start, end).forEach(function (r) { tbody.appendChild(r.tr); });
+                    matched.slice(start, end).forEach(function(r) {
+                        tbody.appendChild(r.tr);
+                    });
 
                     if (noResult) noResult.classList.toggle('d-none', matched.length > 0);
                     if (info) {
-                        info.textContent = matched.length
-                            ? 'नोंदी ' + (start + 1) + ' ते ' + end + ' पैकी ' + matched.length + ' दर्शवत आहे'
-                            : 'नोंदी 0 पैकी 0 दर्शवत आहे';
+                        info.textContent = matched.length ?
+                            'नोंदी ' + (start + 1) + ' ते ' + end + ' पैकी ' + matched.length + ' दर्शवत आहे' :
+                            'नोंदी 0 पैकी 0 दर्शवत आहे';
                     }
                     if (pager) {
                         var html = pageItem('मागील', page - 1, page === 1 ? 'disabled' : '');
@@ -261,13 +308,13 @@
                 }
 
                 if (search) {
-                    search.addEventListener('input', function () {
+                    search.addEventListener('input', function() {
                         page = 1;
                         render();
                     });
                 }
                 if (pager) {
-                    pager.addEventListener('click', function (e) {
+                    pager.addEventListener('click', function(e) {
                         var link = e.target.closest('.page-link');
                         if (!link) return;
                         e.preventDefault();
@@ -277,7 +324,41 @@
                         render();
                     });
                 }
+                // A row deleted by the delete-confirmation modal leaves the list for good
+                table.addEventListener('rowremoved', function(e) {
+                    rows = rows.filter(function(r) {
+                        return r.tr !== e.detail;
+                    });
+                    render();
+                });
                 render();
+            });
+        })();
+    </script>
+    <script>
+        // Delete confirmation: the trash button opens #deleteRecordModal, "होय, हटवा" removes that row
+        (function() {
+            var modalEl = document.getElementById('deleteRecordModal');
+            var nameEl = document.getElementById('deleteRecordName');
+            var targetRow = null;
+
+            modalEl.addEventListener('show.bs.modal', function(e) {
+                targetRow = e.relatedTarget ? e.relatedTarget.closest('tr') : null;
+                var title = targetRow && (targetRow.querySelector('.cell-title') || targetRow.cells[0]);
+                nameEl.textContent = title ? title.textContent.trim() : '';
+            });
+
+            // No backend yet: the row is only removed from the page
+            document.getElementById('deleteRecordConfirm').addEventListener('click', function() {
+                if (targetRow) {
+                    var table = targetRow.closest('table');
+                    targetRow.remove();
+                    if (table) table.dispatchEvent(new CustomEvent('rowremoved', {
+                        detail: targetRow
+                    }));
+                    targetRow = null;
+                }
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
             });
         })();
     </script>

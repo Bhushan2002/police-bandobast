@@ -142,7 +142,7 @@
                                     <tbody>
                                         <tr>
                                             <td><div class="cell-title">पोलीस अधीक्षक</div></td>
-                                            <td><span class="status-pill pill-success">सक्रिय</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
                                             <td class="col-action">
                                                 <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
                                                 <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
@@ -150,7 +150,7 @@
                                         </tr>
                                         <tr>
                                             <td><div class="cell-title">अपर पोलीस अधीक्षक</div></td>
-                                            <td><span class="status-pill pill-success">सक्रिय</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
                                             <td class="col-action">
                                                 <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
                                                 <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
@@ -158,7 +158,7 @@
                                         </tr>
                                         <tr>
                                             <td><div class="cell-title">उपविभागीय पोलीस अधिकारी (DySP)</div></td>
-                                            <td><span class="status-pill pill-success">सक्रिय</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
                                             <td class="col-action">
                                                 <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
                                                 <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
@@ -167,7 +167,7 @@
 
                                         <tr>
                                             <td><div class="cell-title">पोलीस निरीक्षक</div></td>
-                                            <td><span class="status-pill pill-success">सक्रिय</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
                                             <td class="col-action">
                                                 <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
                                                 <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
@@ -176,7 +176,7 @@
 
                                         <tr>
                                             <td><div class="cell-title">सहायक पोलीस निरीक्षक</div></td>
-                                            <td><span class="status-pill pill-success">सक्रिय</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
                                             <td class="col-action">
                                                 <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
                                                 <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
@@ -185,7 +185,7 @@
 
                                         <tr>
                                             <td><div class="cell-title">पोलीस उपनिरीक्षक</div></td>
-                                            <td><span class="status-pill pill-success">सक्रिय</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
                                             <td class="col-action">
                                                 <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
                                                 <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
@@ -210,6 +210,36 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Delete Confirmation Modal -->
+                    <div class="modal fade" id="deleteRecordModal" tabindex="-1" aria-labelledby="deleteRecordModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0 pb-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center px-4 pb-4 pt-0">
+                                    <div class="avatar-lg mx-auto mb-3">
+                                        <span class="avatar-title bg-danger-subtle text-danger rounded-circle fs-1">
+                                            <i class="ri-delete-bin-line"></i>
+                                        </span>
+                                    </div>
+                                    <h5 class="mb-2" id="deleteRecordModalLabel">नोंद हटवायची आहे का?</h5>
+                                    <p class="text-muted mb-0">
+                                        <span class="fw-semibold text-body" id="deleteRecordName"></span> ही नोंद कायमची हटवली जाईल. ही क्रिया परत घेता येणार नाही.
+                                    </p>
+                                    <div class="d-flex justify-content-center gap-2 mt-4">
+                                        <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">रद्द करा</button>
+                                        <button type="button" class="btn btn-danger waves-effect waves-light d-flex align-items-center" id="deleteRecordConfirm">
+                                            <i class="ri-delete-bin-line"></i>
+                                            <span class="px-2">होय, हटवा</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Delete Confirmation Modal -->
 
                 </div>
                 <!-- container-fluid -->
@@ -292,7 +322,37 @@
                         render();
                     });
                 }
+                // A row deleted by the delete-confirmation modal leaves the list for good
+                table.addEventListener('rowremoved', function (e) {
+                    rows = rows.filter(function (r) { return r.tr !== e.detail; });
+                    render();
+                });
                 render();
+            });
+        })();
+    </script>
+    <script>
+        // Delete confirmation: the trash button opens #deleteRecordModal, "होय, हटवा" removes that row
+        (function () {
+            var modalEl = document.getElementById('deleteRecordModal');
+            var nameEl = document.getElementById('deleteRecordName');
+            var targetRow = null;
+
+            modalEl.addEventListener('show.bs.modal', function (e) {
+                targetRow = e.relatedTarget ? e.relatedTarget.closest('tr') : null;
+                var title = targetRow && (targetRow.querySelector('.cell-title') || targetRow.cells[0]);
+                nameEl.textContent = title ? title.textContent.trim() : '';
+            });
+
+            // No backend yet: the row is only removed from the page
+            document.getElementById('deleteRecordConfirm').addEventListener('click', function () {
+                if (targetRow) {
+                    var table = targetRow.closest('table');
+                    targetRow.remove();
+                    if (table) table.dispatchEvent(new CustomEvent('rowremoved', { detail: targetRow }));
+                    targetRow = null;
+                }
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
             });
         })();
     </script>

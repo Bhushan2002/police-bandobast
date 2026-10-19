@@ -306,7 +306,7 @@
                                             <td class="col-num">79</td>
                                             <td class="col-num">79</td>
                                             <td class="col-num">79/79</td>
-                                            <td><span class="status-pill pill-success">पूर्ण मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
                                             <td class="text-nowrap">06 ऑक्टो, 2026</td>
                                             <td></td>
                                         </tr>
@@ -316,7 +316,7 @@
                                             <td class="col-num">41</td>
                                             <td class="col-num">32</td>
                                             <td class="col-num">32/32</td>
-                                            <td><span class="status-pill pill-warning">अंशतः मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
                                             <td class="text-nowrap">06 ऑक्टो, 2026</td>
                                             <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
                                         </tr>
@@ -326,7 +326,7 @@
                                             <td class="col-num">70</td>
                                             <td class="col-num">70</td>
                                             <td class="col-num">67/70</td>
-                                            <td><span class="status-pill pill-success">पूर्ण मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
                                             <td class="text-nowrap">09 ऑक्टो, 2026</td>
                                             <td></td>
                                         </tr>
@@ -336,7 +336,7 @@
                                             <td class="col-num">20</td>
                                             <td class="col-num">20</td>
                                             <td class="col-num">20/20</td>
-                                            <td><span class="status-pill pill-success">पूर्ण मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
                                             <td class="text-nowrap">10 ऑक्टो, 2026</td>
                                             <td></td>
                                         </tr>
@@ -346,7 +346,7 @@
                                             <td class="col-num">60</td>
                                             <td class="col-num">50</td>
                                             <td class="col-num">50/50</td>
-                                            <td><span class="status-pill pill-warning">अंशतः मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
                                             <td class="text-nowrap">06 ऑक्टो, 2026</td>
                                             <td>कर्मचारी अन्य बंदोबस्तावर</td>
                                         </tr>
@@ -356,7 +356,7 @@
                                             <td class="col-num">150</td>
                                             <td class="col-num">150</td>
                                             <td class="col-num">137/150</td>
-                                            <td><span class="status-pill pill-success">पूर्ण मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
                                             <td class="text-nowrap">11 सप्टें, 2026</td>
                                             <td></td>
                                         </tr>
@@ -366,7 +366,7 @@
                                             <td class="col-num">90</td>
                                             <td class="col-num">90</td>
                                             <td class="col-num">89/90</td>
-                                            <td><span class="status-pill pill-success">पूर्ण मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
                                             <td class="text-nowrap">11 सप्टें, 2026</td>
                                             <td></td>
                                         </tr>
@@ -376,7 +376,7 @@
                                             <td class="col-num">60</td>
                                             <td class="col-num">45</td>
                                             <td class="col-num">45/45</td>
-                                            <td><span class="status-pill pill-warning">अंशतः मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
                                             <td class="text-nowrap">12 सप्टें, 2026</td>
                                             <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
                                         </tr>
@@ -386,7 +386,7 @@
                                             <td class="col-num">40</td>
                                             <td class="col-num">30</td>
                                             <td class="col-num">30/30</td>
-                                            <td><span class="status-pill pill-warning">अंशतः मंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
                                             <td class="text-nowrap">14 ऑक्टो, 2026</td>
                                             <td>कर्मचारी रजेवर</td>
                                         </tr>
@@ -396,7 +396,7 @@
                                             <td class="col-num">25</td>
                                             <td class="col-num">0</td>
                                             <td class="col-num">0/0</td>
-                                            <td><span class="status-pill pill-danger">नामंजूर</span></td>
+                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">नामंजूर</span></td>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
                                             <td>आधीच अन्य बंदोबस्त नियोजित</td>
                                         </tr>
@@ -432,7 +432,7 @@
 
         <!-- Filter modal -->
         <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="filterModalLabel">फिल्टर</h5>

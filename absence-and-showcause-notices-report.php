@@ -337,7 +337,7 @@
                                             <td><div class="cell-title">अश्विनी जगताप</div></td>
                                             <td class="text-nowrap">25 सप्टें, 2026</td>
                                             <td>विजय मोहिते</td>
-                                            <td><span class="status-pill pill-success">कार्यवाही पूर्ण</span></td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">कार्यवाही पूर्ण</span></td>
                                             <td class="col-num">प्राप्त</td>
                                             <td>ताकीद (समज) देऊन बंद</td>
                                         </tr>
@@ -346,7 +346,7 @@
                                             <td><div class="cell-title">प्रिया मोरे</div></td>
                                             <td class="text-nowrap">10 ऑक्टो, 2026</td>
                                             <td>राहुल शिंदे</td>
-                                            <td><span class="status-pill pill-warning">खुलासा प्रलंबित</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">खुलासा प्रलंबित</span></td>
                                             <td class="col-num">नाही</td>
                                             <td>—</td>
                                         </tr>
@@ -395,7 +395,7 @@
 
         <!-- Filter modal -->
         <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="filterModalLabel">फिल्टर</h5>

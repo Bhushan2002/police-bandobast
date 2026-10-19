@@ -501,7 +501,7 @@
                                             <td>संतोष पवार</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -512,7 +512,7 @@
                                             <td>अमोल कदम</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -523,7 +523,7 @@
                                             <td>महेश घोरपडे</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -534,7 +534,7 @@
                                             <td>प्रिया मोरे</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -545,7 +545,7 @@
                                             <td>गणेश भोसले</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -556,7 +556,7 @@
                                             <td>स्वप्नील शिंदे</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -567,7 +567,7 @@
                                             <td>अनिल यादव</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -578,7 +578,7 @@
                                             <td>प्रशांत घाडगे</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-warning">आज — बाकी</span></td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">आज — बाकी</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -589,7 +589,7 @@
                                             <td>संतोष पवार</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-danger">गैरहजर</span></td>
+                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">गैरहजर</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -600,7 +600,7 @@
                                             <td>अमोल कदम</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
-                                            <td><span class="status-pill pill-danger">गैरहजर</span></td>
+                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">गैरहजर</span></td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
                                             <td class="col-num">—</td>
@@ -638,7 +638,7 @@
 
         <!-- Filter modal -->
         <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="filterModalLabel">फिल्टर</h5>

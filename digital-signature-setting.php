@@ -158,7 +158,7 @@
                                     <div id="signUploadPane" class="d-none">
                                         <div class="border border-dashed rounded p-4 text-center">
                                             <input type="file" id="signFile" class="form-control" accept="image/png, image/jpeg">
-                                            <p class="card-text mb-0 mt-2"><small>पांढऱ्या कागदावर केलेल्या सहीचा स्पष्ट फोटो / स्कॅन (PNG / JPG) निवडा</small></p>
+                                            <p class="card-text mb-0 mt-2" id="signFileHint"><small>पांढऱ्या कागदावर केलेल्या सहीचा स्पष्ट फोटो / स्कॅन (PNG / JPG) निवडा</small></p>
                                         </div>
                                     </div>
 
@@ -275,6 +275,241 @@
                         .map(function (r) { return r.cells; });
                     grid.updateConfig({ data: data }).forceRender();
                 });
+            });
+        })();
+    </script>
+    <script>
+        // Signature pad: draw on the canvas or upload a photo, preview it, then save it to the card
+        (function () {
+            var modalEl = document.getElementById('signatureModal');
+            var canvas = document.getElementById('signCanvas');
+            var ctx = canvas.getContext('2d');
+            var inkSelect = document.getElementById('signInk');
+            var drawPane = document.getElementById('signDrawPane');
+            var uploadPane = document.getElementById('signUploadPane');
+            var fileInput = document.getElementById('signFile');
+            var fileHint = document.getElementById('signFileHint');
+            var fileHintHtml = fileHint.innerHTML;
+            var modalPreview = document.getElementById('signModalPreview');
+            var nameInput = document.getElementById('signName');
+            var desigInput = document.getElementById('signDesignation');
+            var consent = document.getElementById('signConsent');
+            var saveBtn = document.getElementById('saveSign');
+            var modeBtns = modalEl.querySelectorAll('[data-sign-mode]');
+
+            var CANVAS_HEIGHT = 200;          // CSS px, same as the height attribute
+            var MAX_FILE = 2 * 1024 * 1024;   // 2 MB upload limit
+            var mode = 'draw';
+            var ratio = 1;
+            var drawing = false;
+            var hasInk = false;
+            var box;                          // bounding box of the ink, used to crop the export
+            var uploaded = null;              // data URL of the uploaded image
+
+            function resetBox() {
+                box = { minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity };
+            }
+
+            // w-100 stretches the canvas, but its drawing surface stays 300px wide unless we
+            // resize it to the shown width (only measurable while the modal is visible).
+            // Resizing also clears the drawing.
+            function fitCanvas() {
+                ratio = window.devicePixelRatio || 1;
+                canvas.width = canvas.getBoundingClientRect().width * ratio;
+                canvas.height = CANVAS_HEIGHT * ratio;
+                ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+                ctx.lineWidth = 2.5;
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                hasInk = false;
+                resetBox();
+            }
+
+            function clearPad() {
+                ctx.save();
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.restore();
+                hasInk = false;
+                resetBox();
+                refresh();
+            }
+
+            function point(e) {
+                var rect = canvas.getBoundingClientRect();
+                var p = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+                box.minX = Math.min(box.minX, p.x);
+                box.minY = Math.min(box.minY, p.y);
+                box.maxX = Math.max(box.maxX, p.x);
+                box.maxY = Math.max(box.maxY, p.y);
+                return p;
+            }
+
+            // Pointer events cover mouse, finger and stylus with one set of handlers
+            canvas.addEventListener('pointerdown', function (e) {
+                drawing = true;
+                canvas.setPointerCapture(e.pointerId);
+                var p = point(e);
+                ctx.strokeStyle = inkSelect.value;
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p.x, p.y);   // a single tap leaves a dot
+                ctx.stroke();
+            });
+            canvas.addEventListener('pointermove', function (e) {
+                if (!drawing) return;
+                var p = point(e);
+                ctx.lineTo(p.x, p.y);
+                ctx.stroke();
+            });
+            function endStroke() {
+                if (!drawing) return;
+                drawing = false;
+                hasInk = true;
+                refresh();
+            }
+            canvas.addEventListener('pointerup', endStroke);
+            canvas.addEventListener('pointercancel', endStroke);
+            // Stop the page from scrolling while signing with a finger
+            ['touchstart', 'touchmove'].forEach(function (type) {
+                canvas.addEventListener(type, function (e) { e.preventDefault(); }, { passive: false });
+            });
+
+            document.getElementById('clearSign').addEventListener('click', clearPad);
+
+            // Export only the inked area (transparent PNG) so it sits neatly on the PDF
+            function drawnImage() {
+                var pad = 8;
+                var x = Math.max(0, box.minX - pad);
+                var y = Math.max(0, box.minY - pad);
+                var w = Math.min(canvas.width / ratio, box.maxX + pad) - x;
+                var h = Math.min(CANVAS_HEIGHT, box.maxY + pad) - y;
+                var out = document.createElement('canvas');
+                out.width = w * ratio;
+                out.height = h * ratio;
+                out.getContext('2d').drawImage(canvas, x * ratio, y * ratio, w * ratio, h * ratio, 0, 0, out.width, out.height);
+                return out.toDataURL('image/png');
+            }
+
+            function currentImage() {
+                if (mode === 'draw') return hasInk ? drawnImage() : null;
+                return uploaded;
+            }
+
+            // Name and designation printed under the signature (placeholder is the default name)
+            function captionParts() {
+                var parts = [nameInput.value.trim() || nameInput.placeholder, desigInput.value.trim()];
+                return parts.filter(function (t, i) { return t && parts.indexOf(t) === i; });
+            }
+
+            function signatureImg(src) {
+                var img = new Image();
+                img.src = src;
+                img.height = 60;
+                img.alt = 'स्वाक्षरी';
+                img.className = 'mw-100';
+                return img;
+            }
+
+            function refresh() {
+                var src = currentImage();
+                modalPreview.innerHTML = '';
+                if (src) {
+                    modalPreview.appendChild(signatureImg(src));
+                    captionParts().forEach(function (t, i) {
+                        var line = document.createElement('div');
+                        line.className = i === 0 ? 'fw-semibold' : 'text-muted';
+                        line.textContent = t;
+                        modalPreview.appendChild(line);
+                    });
+                } else {
+                    var empty = document.createElement('span');
+                    empty.className = 'text-muted';
+                    empty.textContent = 'स्वाक्षरी नाही';
+                    modalPreview.appendChild(empty);
+                }
+                saveBtn.disabled = !(src && consent.checked);
+            }
+
+            function setMode(m) {
+                mode = m;
+                modeBtns.forEach(function (btn) {
+                    var on = btn.getAttribute('data-sign-mode') === m;
+                    btn.classList.toggle('btn-primary', on);
+                    btn.classList.toggle('btn-light', !on);
+                });
+                drawPane.classList.toggle('d-none', m !== 'draw');
+                uploadPane.classList.toggle('d-none', m !== 'upload');
+                refresh();
+            }
+            modeBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () { setMode(btn.getAttribute('data-sign-mode')); });
+            });
+
+            function setHint(error) {
+                fileHint.classList.toggle('text-danger', !!error);
+                fileHint.innerHTML = fileHintHtml;
+                if (error) fileHint.querySelector('small').textContent = error;
+            }
+
+            fileInput.addEventListener('change', function () {
+                var file = fileInput.files[0];
+                uploaded = null;
+                setHint('');
+                if (file && !/^image\/(png|jpeg)$/.test(file.type)) {
+                    setHint('फक्त PNG / JPG फाइल निवडा');
+                    fileInput.value = '';
+                } else if (file && file.size > MAX_FILE) {
+                    setHint('फाइल 2 MB पेक्षा मोठी आहे');
+                    fileInput.value = '';
+                } else if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function () { uploaded = reader.result; refresh(); };
+                    reader.readAsDataURL(file);
+                    return;
+                }
+                refresh();
+            });
+
+            nameInput.addEventListener('input', refresh);
+            desigInput.addEventListener('input', refresh);
+            consent.addEventListener('change', refresh);
+
+            // Every time the modal opens it starts fresh on the draw pad
+            modalEl.addEventListener('show.bs.modal', function () {
+                hasInk = false;
+                uploaded = null;
+                fileInput.value = '';
+                setHint('');
+                consent.checked = false;
+                setMode('draw');
+            });
+            modalEl.addEventListener('shown.bs.modal', function () {
+                fitCanvas();
+                refresh();
+            });
+            var lastWidth = window.innerWidth;
+            window.addEventListener('resize', function () {
+                if (window.innerWidth === lastWidth) return;   // ignore mobile address-bar height changes
+                lastWidth = window.innerWidth;
+                if (modalEl.classList.contains('show') && mode === 'draw') {
+                    fitCanvas();
+                    refresh();
+                }
+            });
+
+            // No backend yet: the signature is shown on the card but lost on reload
+            saveBtn.addEventListener('click', function () {
+                var src = currentImage();
+                if (!src || !consent.checked) return;
+                var preview = document.getElementById('signPreview');
+                preview.innerHTML = '';
+                preview.appendChild(signatureImg(src));
+                preview.classList.remove('text-muted', 'px-5', 'py-4');
+                preview.classList.add('p-2');
+                document.getElementById('signUnderText').textContent = 'सहीखाली: ' + captionParts().join(', ');
+                document.getElementById('signBtnText').textContent = 'स्वाक्षरी बदला';
+                bootstrap.Modal.getOrCreateInstance(modalEl).hide();
             });
         })();
     </script>
