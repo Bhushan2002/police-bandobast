@@ -26,5 +26,7 @@
         <?php include 'component/header.php'; ?>
         <?php include 'component/sidebar.php'; ?>
     </div>
+    <!-- Bootstrap JS (needed for sidebar dropdowns, tabs and modals) -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

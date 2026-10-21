@@ -80,11 +80,11 @@
                     <!-- My Signature Card -->
                     <div class="card">
                         <div class="card-header d-flex align-items-center gap-3">
-                            <div class="avatar-sm flex-shrink-0">
+                            <!-- <div class="avatar-sm flex-shrink-0">
                                 <span class="avatar-title bg-primary rounded">
                                     <i class="ri-quill-pen-line text-secondary"></i>
                                 </span>
-                            </div>
+                            </div> -->
                             <div>
                                 <h5 class="card-title mb-0">माझी स्वाक्षरी</h5>
                                 <p class="card-text mb-0">आपण काढलेल्या अहवाल / नोटीसवर ही सही येईल</p>

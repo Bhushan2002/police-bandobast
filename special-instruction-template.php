@@ -27,14 +27,6 @@
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<style>
-    body {
-        font-family: 'Eczar', sans-serif;
-        line-height: 1.7;
-        /* Devanagari needs more height or matras get clipped */
-    }
-</style>
-
 <body>
     <div class="layout-wrapper">
         <?php include 'component/header.php'; ?>

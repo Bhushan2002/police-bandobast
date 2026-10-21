@@ -246,6 +246,8 @@
         })();
     </script>
 
+    <!-- Bootstrap JS (needed for sidebar dropdowns, tabs and modals) -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
