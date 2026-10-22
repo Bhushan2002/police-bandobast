@@ -43,7 +43,21 @@
                     <div class="collapse menu-dropdown" id="sidebarOverview">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item"><a href="dashboard.php" class="nav-link">डॅशबोर्ड</a></li>
-                            <li class="nav-item"><a href="notifications.php" class="nav-link">सूचना</a></li>
+                            <li class="nav-item">
+                                <!-- <a href="notifications.php" class="nav-link">सूचना</a> -->
+                                <a href="#sidebarDailyDuty" class="nav-link" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarDailyDuty">सूचना</a>
+                                <div class="collapse menu-dropdown" id="sidebarDailyDuty">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item"><a href="daily-duty.php" class="nav-link">
+                                                सर्व
+                                            </a></li>
+                                        <li class="nav-item"><a href="daily-duty-create.php" class="nav-link">
+                                                न वाचलेल्या
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -89,7 +103,21 @@
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item"><a href="attendance.php" class="nav-link">हजेरी नोंदवही</a></li>
                             <li class="nav-item"><a href="leave.php" class="nav-link">रजा व्यवस्थापन</a></li>
-                            <li class="nav-item"><a href="show-cause-notice.php" class="nav-link">कारणे दाखवा नोटीस</a>
+                            <li class="nav-item">
+                                <!-- <a href="show-cause-notice.php" class="nav-link">कारणे दाखवा नोटीस</a> -->
+
+                                <a href="#sidebarDailyDuty" class="nav-link" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarDailyDuty">कारणे दाखवा नोटीस</a>
+                                <div class="collapse menu-dropdown" id="sidebarDailyDuty">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item"><a href="daily-duty.php" class="nav-link">गैरहजर - नोटीस बाकी</a></li>
+                                        <li class="nav-item"><a href="daily-duty-create.php" class="nav-link">खुलासा प्रलंबित</a></li>
+                                        <li class="nav-item"><a href="duty-recruitment-attendance.php"
+                                                class="nav-link">खुलासा प्राप्त</a></li>
+                                        <li class="nav-item"><a href="duty-recruitment-attendance.php"
+                                                class="nav-link">कार्यवाही पूर्ण</a></li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -111,7 +139,25 @@
                             <li class="nav-item"><a href="shift.php" class="nav-link">शिफ्ट</a></li>
                             <li class="nav-item"><a href="bandobast-type.php" class="nav-link">बंदोबस्त प्रकार</a></li>
                             <li class="nav-item"><a href="employees.php" class="nav-link">कर्मचारी (ॲप)</a></li>
-                            <li class="nav-item"><a href="face-registration.php" class="nav-link">चेहरा नोंदणी</a></li>
+                            <li class="nav-item">
+                                <!-- <a href="face-registration.php" class="nav-link">चेहरा नोंदणी</a> -->
+                                <a href="#sidebarDailyDuty" class="nav-link" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarDailyDuty">चेहरा नोंदणी</a>
+                                <div class="collapse menu-dropdown" id="sidebarDailyDuty">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item"><a href="daily-duty.php" class="nav-link">
+                                                सर्व
+                                            </a></li>
+                                        <li class="nav-item"><a href="daily-duty-create.php" class="nav-link">
+                                                बाकी
+                                            </a></li>
+                                        <li class="nav-item"><a href="duty-recruitment-attendance.php"
+                                                class="nav-link">
+                                                झाली
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </li>

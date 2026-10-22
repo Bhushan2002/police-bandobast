@@ -1,38 +1,4 @@
-<!doctype html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap" rel="stylesheet">
-
-    <!-- Sweet Alert css-->
-    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- gridjs css -->
-    <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
-    <style>
-        .gridjs-table {
-            table-layout: auto;
-        }
-    </style>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-    <!-- custom Css-->
-    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
-</head>
+<?php include 'component/head.php'; ?>
 
 
 <body>
@@ -139,50 +105,7 @@
         <?php include 'component/footer.php'; ?>
     </div>
 
-    <!-- Bootstrap JS (needed for tabs and modals) -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // सर्व / न वाचलेल्या filter + counts; clicking an unread notification marks it read
-        (function () {
-            var list = document.getElementById('notificationList');
-            var items = Array.prototype.slice.call(list.querySelectorAll('.list-group-item'));
-            var tabs = document.querySelectorAll('#notificationFilter .nav-link');
-            var noResult = list.parentNode.querySelector('.noresult');
-            var filter = 'all';
 
-            function isUnread(item) { return item.getAttribute('data-unread') === '1'; }
-
-            function render() {
-                var shown = 0;
-                items.forEach(function (item) {
-                    var show = filter === 'all' || isUnread(item);
-                    item.classList.toggle('d-none', !show);
-                    if (show) shown++;
-                });
-                document.querySelector('[data-count="all"]').textContent = items.length;
-                document.querySelector('[data-count="unread"]').textContent = items.filter(isUnread).length;
-                noResult.classList.toggle('d-none', shown > 0);
-            }
-
-            tabs.forEach(function (tab) {
-                tab.addEventListener('click', function () {
-                    tabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
-                    filter = tab.getAttribute('data-filter');
-                    render();
-                });
-            });
-
-            // No backend yet: read state lives only on the page
-            items.forEach(function (item) {
-                item.addEventListener('click', function () {
-                    item.setAttribute('data-unread', '0');
-                    render();
-                });
-            });
-
-            render();
-        })();
-    </script>
 </body>
 
 </html>
