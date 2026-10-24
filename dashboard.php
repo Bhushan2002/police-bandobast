@@ -1,4 +1,5 @@
 <?php include 'component/head.php'; ?>
+
 <body>
     <div class="layout-wrapper">
         <?php include 'component/header.php'; ?>
@@ -9,7 +10,7 @@
                 <div class="container-fluid">
 
                     <!-- start page title -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
                                 <h4 class="mb-sm-0">डॅशबोर्ड</h4>
@@ -17,29 +18,29 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">डॅशबोर्ड</a></li>
-
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>डॅशबोर्ड</h2>
-                            <!-- <p>सर्व निर्देशक एकाच ठिकाणी</p> -->
+                           <p class="text-muted">सातारा जिल्हा पोलीस मुख्यालय · मुख्यालय</p>
                         </div>
-                        <div class="">
+                        <a href="bandobast-create.php">
                             <button type="button" class="btn btn-primary waves-effect waves-light d-flex align-items-center">
                                 <span class="mdi mdi-plus"></span>
                                 <span class="px-2"> नवीन बंदोबस्त</span>
                             </button>
-                        </div>
+                        </a>
+
                     </div>
 
-                    <div class="d-flex flex-wrap mx-2 align-items-center">
-                        <div class="card card-animate mx-2 flex-fill">
+                    <div class="d-flex flex-wrap m-2 align-items-center">
+                        <div class="card card-animate flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar-sm flex-shrink-0 me-3">
@@ -121,7 +122,6 @@
                     <!-- chart -->
                     <div class="row">
 
-
                         <div class="col-xl-8">
                             <div class="card">
                                 <div class="card-header">
@@ -130,12 +130,12 @@
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
-                                    <div id="column_chart_datalabel" data-colors='["--vz-success"]' class="apex-charts" dir="ltr"></div>
+                                    <div id="column_stacked_chart" data-colors='["rgb(26, 199, 6)", "rgb(226, 14, 14)"]' class="apex-charts" dir="ltr"></div>
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div>
 
-                        <div class="col-xl-4">
+                        <div class="col-xl-4">  
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title mb-0">कार्य प्रगती</h4>
@@ -227,6 +227,11 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                
+
+
                                 <div class="card-body p-0">
                                     <div class="table-responsive">
                                         <table class="table data-table align-middle mb-0">
@@ -405,70 +410,83 @@
     </div>
 
     <!-- ApexCharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- <script src="assets/libs/apexcharts/apexcharts.min.js"></script> -->
     <script>
-        // resolve data-colors (CSS vars like "--vz-success") into actual color values
-        function getChartColorsArray(id) {
+        // data-colors मधील CSS variables वरून रंग मिळवणे
+        function getChartColors(id) {
             var el = document.getElementById(id);
-            if (!el) return null;
-            var colors = el.getAttribute('data-colors');
-            if (!colors) return null;
-            return JSON.parse(colors).map(function(c) {
-                c = c.replace(' ', '');
-                return getComputedStyle(document.documentElement).getPropertyValue(c).trim() || c;
+            if (!el) return [];
+            return JSON.parse(el.getAttribute('data-colors')).map(function (v) {
+                var c = getComputedStyle(document.documentElement).getPropertyValue(v.trim()).trim();
+                return c || v;
             });
         }
 
-        var columnDatalabelColors = getChartColorsArray('column_chart_datalabel');
-        if (columnDatalabelColors) {
-            new ApexCharts(document.querySelector('#column_chart_datalabel'), {
-                chart: {
-                    height: 350,
-                    type: 'bar',
-                    toolbar: {
-                        show: false
-                    }
-                },
-                plotOptions: {
-                    bar: {
-                        dataLabels: {
-                            position: 'top'
-                        }
-                    }
-                },
-                dataLabels: {
-                    enabled: true,
-                    offsetY: -20,
-                    style: {
-                        fontSize: '12px',
-                        colors: ['#adb5bd']
-                    }
-                },
-                series: [{
-                    name: 'Bandobast',
-                    data: [12, 18, 25, 40, 22, 30, 28, 19, 35, 14, 26, 9]
-                }],
-                colors: columnDatalabelColors,
-                grid: {
-                    borderColor: '#f1f1f1'
-                },
-                xaxis: {
-                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    axisBorder: {
-                        show: false
-                    },
-                    axisTicks: {
-                        show: false
-                    }
-                },
-                yaxis: {
-                    labels: {
-                        show: false
-                    }
-                }
-            }).render();
-        }
+        // 1. दिनांकनिहाय हजेरी — मागील 21 दिवस (dummy data)
+        var attendanceChart = new ApexCharts(document.querySelector('#column_stacked_chart'), {
+            chart: { type: 'bar', height: 350, stacked: true, toolbar: { show: false } },
+            series: [
+                { name: 'हजर', data: [0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                { name: 'गैरहजर', data: [0, 0, 0, 0, 0, 0, 0, 4, 8, 8, 8, 8, 8, 8, 8, 11, 8, 10, 0, 0, 0] }
+            ],
+            xaxis: {
+                categories: ['3/10', '4/10', '5/10', '6/10', '7/10', '8/10', '9/10', '10/10', '11/10', '12/10', '13/10',
+                    '14/10', '15/10', '16/10', '17/10', '18/10', '19/10', '20/10', '21/10', '22/10', '23/10']
+            },
+            plotOptions: { bar: { columnWidth: '60%', borderRadius: 4 } },
+            dataLabels: { enabled: false },
+            legend: { position: 'bottom' },
+            colors: getChartColors('column_stacked_chart')
+        });
+        attendanceChart.render();
+
+        // 2. पोलीस ठाणेनिहाय मनुष्यबळ — मागणी विरुद्ध मंजूर (dummy data)
+        var stationChart = new ApexCharts(document.querySelector('#grouped_bar'), {
+            chart: { type: 'bar', height: 360, toolbar: { show: false } },
+            series: [
+                { name: 'मागणी', data: [335, 166, 81, 70, 60, 20] },
+                { name: 'मंजूर', data: [229, 122, 45, 70, 50, 20] }
+            ],
+            xaxis: {
+                categories: ['सातारा शहर पोलीस ठाणे', 'शाहूपुरी पोलीस ठाणे', 'सातारा तालुका पोलीस ठाणे',
+                    'कराड शहर पोलीस ठाणे', 'फलटण शहर पोलीस ठाणे', 'कराड तालुका पोलीस ठाणे'],
+                labels: { show: false },
+                axisBorder: { show: false },
+                axisTicks: { show: false }
+            },
+            yaxis: {
+                labels: { maxWidth: 220, style: { fontSize: '13px', fontWeight: 500 } }
+            },
+            grid: {
+                xaxis: { lines: { show: false } },
+                yaxis: { lines: { show: false } }
+            },
+            plotOptions: {
+                bar: { horizontal: true, barHeight: '80%', borderRadius: 4, dataLabels: { position: 'top' } }
+            },
+            stroke: { show: true, width: 2, colors: ['transparent'] },
+            dataLabels: { enabled: true, offsetX: 22, style: { fontSize: '11px', fontWeight: 600, colors: ['#495057'] } },
+            legend: { position: 'top', horizontalAlign: 'right', markers: { radius: 2 } },
+            tooltip: { shared: true, intersect: false },
+            colors: getChartColors('grouped_bar')
+        });
+        stationChart.render();
+
+        // 3. बंदोबस्त स्थिती — एकूण 6 (dummy data)
+        var statusChart = new ApexCharts(document.querySelector('#simple_dount_chart'), {
+            chart: { type: 'donut', height: 320 },
+            series: [1, 2, 1, 1, 1],
+            labels: ['चालू', 'मंजूर', 'प्रलंबित', 'नामंजूर', 'पूर्ण'],
+            legend: { position: 'bottom' },
+            dataLabels: { dropShadow: { enabled: false } },
+            plotOptions: {
+                pie: { donut: { labels: { show: true, total: { show: true, label: 'एकूण' } } } }
+            },
+            colors: getChartColors('simple_dount_chart')
+        });
+        statusChart.render();
     </script>
+
 </body>
 
 </html>

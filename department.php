@@ -75,101 +75,118 @@
                     </div>
                     <!-- End Add Vibhag Modal -->
 
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">सर्व विभाग</h5>
-                                </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "विभाग शोधा";
-                                        include 'component/search-input.php'; ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>विभागाचे नाव</th>
-                                            <th>स्थिती</th>
-                                            <th class="col-action">कृती</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="cell-title">कायदा व सुव्यवस्था</div>
-                                            </td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
-                                            <td class="col-action">
-                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="cell-title">वाहतूक शाखा</div>
-                                            </td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
-                                            <td class="col-action">
-                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="cell-title">स्थानिक गुन्हे शाखा</div>
-                                            </td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
-                                            <td class="col-action">
-                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="cell-title">स्थानिक गुन्हे शाखा</div>
-                                            </td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
-                                            <td class="col-action">
-                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="cell-title">स्थानिक गुन्हे शाखा</div>
-                                            </td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">सक्रिय</span></td>
-                                            <td class="col-action">
-                                                <button type="button" class="btn btn-ghost-primary btn-icon edit-item-btn" title="संपादन" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-pencil-line"></i></button>
-                                                <button type="button" class="btn btn-ghost-danger btn-icon remove-item-btn" title="हटवा" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-delete-bin-line"></i></button>
-                                            </td>
-                                        </tr>
 
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
+
+
+
+                    <div class="col-lg-12">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                        aria-describedby="model-datatables_info">
+                                        <thead>
+                                            <tr>
+                                                <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+
+                                                <th class="col-6">विभागाचे नाव</th>
+                                                <th class="text-center">स्थिती</th>
+                                                <th>कृती</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>कायदा व सुव्यवस्था</td>
+                                                <td class="text-center align-middle"><span class="badge bg-success-subtle text-success">सक्रिय</span></td>
+                                                <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end" style="">
+                                                            <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>वाहतूक शाखा</td>
+                                                <td class="text-center align-middle"><span class="badge bg-success-subtle text-success">सक्रिय</span></td>
+                                                <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end" style="">
+                                                            <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>स्थानिक गुन्हे शाखा </td>
+                                                <td class="text-center align-middle"><span class="badge bg-success-subtle text-success">सक्रिय</span></td>
+                                                <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end" style="">
+                                                            <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>स्थानिक गुन्हे शाखा</td>
+                                                <td class="text-center align-middle"><span class="badge bg-success-subtle text-success">सक्रिय</span></td>
+                                                <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end" style="">
+                                                            <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted"></div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0"></ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> <!-- table ended -->
 
                     <!-- Delete Confirmation Modal -->
                     <div class="modal fade" id="deleteRecordModal" tabindex="-1" aria-labelledby="deleteRecordModalLabel" aria-hidden="true">

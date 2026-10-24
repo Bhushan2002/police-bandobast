@@ -1,14 +1,11 @@
-<?php
-session_start();
-$pageTitle = 'Bandobast';
-?>
+
 <?php include 'component/head.php'; ?>
 
 <body>
-
     <div id="layout-wrapper">
 
         <?php include 'component/header.php'; ?>
+        
         <?php include 'component/sidebar.php'; ?>
 
         <div class="main-content">

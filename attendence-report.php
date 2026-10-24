@@ -122,41 +122,29 @@
                                 <div class="col-md">
                                     <h5 class="card-title mb-0">दिनांकनिहाय हजेरी</h5>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-                                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
-                                        </button>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
-                        <div class="card-body p-0">
+                        <div class="card-body p-2">
                             <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
+                                <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed">
                                     <thead class="table-light">
                                         <tr>
                                             <th>दिनांक</th>
-                                            <th class="col-num">नियुक्त</th>
-                                            <th class="col-num">उपस्थित</th>
-                                            <th class="col-num">गैरहजर</th>
-                                            <th class="col-num">आज बाकी</th>
-                                            <th class="min-w-sm">उपस्थिती %</th>
+                                            <th >नियुक्त</th>
+                                            <th>उपस्थित</th>
+                                            <th>गैरहजर</th>
+                                            <th>आज बाकी</th>
+                                            <th>उपस्थिती %</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>25 सप्टें, 2026</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">0</td>
+                                            <td >5</td>
+                                            <td >2</td>
+                                            <td >3</td>
+                                            <td >0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
@@ -165,10 +153,10 @@
                                         </tr>
                                         <tr>
                                             <td>26 सप्टें, 2026</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
+                                            <td>5</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
@@ -177,10 +165,10 @@
                                         </tr>
                                         <tr>
                                             <td>10 ऑक्टो, 2026</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">0</td>
+                                            <td>8</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
@@ -189,10 +177,10 @@
                                         </tr>
                                         <tr>
                                             <td>11 ऑक्टो, 2026</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
@@ -201,10 +189,10 @@
                                         </tr>
                                         <tr>
                                             <td>12 ऑक्टो, 2026</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
@@ -213,10 +201,10 @@
                                         </tr>
                                         <tr>
                                             <td>13 ऑक्टो, 2026</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
@@ -225,10 +213,10 @@
                                         </tr>
                                         <tr>
                                             <td>14 ऑक्टो, 2026</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
@@ -237,12 +225,14 @@
                                         </tr>
                                         <tr>
                                             <td>15 ऑक्टो, 2026</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">8</td>
+                                            <td>8</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>8</td>
                                             <td>
-                                                <span class="text-muted">— (आज चालू)</span>
+                                                 <div class="progress" style="min-width: 140px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -252,20 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 8 पैकी 8 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
 
                     <!-- कर्मचारीनिहाय हजेरी -->
@@ -275,152 +252,128 @@
                                 <div class="col-md">
                                     <h5 class="card-title mb-0">कर्मचारीनिहाय हजेरी</h5>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
+                        <div class="card-body p-2">
                             <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
+                                <table id="buttons-datatables" class="table table-bordered nowrap align-middle dataTable no-footer dtr-inline collapsed">
                                     <thead class="table-light">
                                         <tr>
                                             <th>कर्मचारी</th>
-                                            <th class="col-num">बक्कल</th>
+                                            <th>बक्कल</th>
                                             <th>पोलीस ठाणे</th>
-                                            <th class="col-num">ड्युटी-दिवस</th>
-                                            <th class="col-num">उपस्थित</th>
-                                            <th class="col-num">गैरहजर</th>
-                                            <th class="col-num">चेहरा जुळणी</th>
+                                            <th>ड्युटी-दिवस</th>
+                                            <th>उपस्थित</th>
+                                            <th>गैरहजर</th>
+                                            <th>चेहरा जुळणी</th>
                                             <th>नोटीस / कार्यवाही</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><div class="cell-title">अनिल यादव</div></td>
-                                            <td class="col-num">10163</td>
+                                            <td>अनिल यादव</td>
+                                            <td>10163</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">प्रशांत घाडगे</div></td>
-                                            <td class="col-num">10008</td>
+                                            <td>प्रशांत घाडगे</td>
+                                            <td>10008</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">प्रिया मोरे</div></td>
-                                            <td class="col-num">7012</td>
+                                            <td>प्रिया मोरे</td>
+                                            <td>7012</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>—</td>
                                             <td>खुलासा प्रलंबित</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">स्वप्नील शिंदे</div></td>
-                                            <td class="col-num">10007</td>
+                                            <td>स्वप्नील शिंदे</td>
+                                            <td>10007</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>5</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">अमोल कदम</div></td>
-                                            <td class="col-num">6734</td>
+                                            <td>अमोल कदम</td>
+                                            <td>6734</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">7</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">—</td>
+                                            <td>7</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">गणेश भोसले</div></td>
-                                            <td class="col-num">2208</td>
+                                            <td>गणेश भोसले</td>
+                                            <td>2208</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">—</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">महेश घोरपडे</div></td>
-                                            <td class="col-num">4410</td>
+                                            <td>महेश घोरपडे</td>
+                                            <td >4410</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">—</td>
+                                            <td>5</td>
+                                            <td>1</td>
+                                            <td>4</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">संतोष पवार</div></td>
-                                            <td class="col-num">4521</td>
+                                            <td>संतोष पवार</td>
+                                            <td>4521</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">7</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">—</td>
+                                            <td>7</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">अक्षय कदम</div></td>
-                                            <td class="col-num">10009</td>
+                                            <td>अक्षय कदम</td>
+                                            <td>10009</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">—</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td >2</td>
+                                            <td >—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td><div class="cell-title">हेमंत पाटील</div></td>
-                                            <td class="col-num">10164</td>
+                                            <td>हेमंत पाटील</td>
+                                            <td>10164</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">—</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>2</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div class="noresult text-center py-4 d-none">
                                     <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 10 पैकी 10 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -435,9 +388,6 @@
                                 </div>
                                 <div class="col-md-auto">
                                     <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
                                         <button type="button" class="btn btn-soft-secondary">
                                             <i class="ri-download-line align-bottom me-1"></i> CSV
                                         </button>

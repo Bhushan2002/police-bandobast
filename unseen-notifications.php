@@ -15,8 +15,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">सूचना
-                                </h4>
+                                <h4 class="mb-sm-0">सूचना</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -27,40 +26,22 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex justify-content-between align-items-center p-3">
+                            <!-- <div class="d-flex justify-content-between align-items-center p-3">
                                 <div class="page-title">
-                                    <h2>सूचना</h2>
+                                    <h2>न वाचलेल्या सूचना</h2>
                                     <p>आपल्याशी संबंधित प्रत्येक कृतीची सूचना</p>
                                 </div>
-                                <!-- <div class="d-flex">
-                                    <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                        <span class="px-2">Excel (CSV)</span></button>
 
-                                    <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                        <span class="ri-file-pdf-line"></span>
-                                        <span class="px-2">PDF अहवाल</span>
-                                    </button>
-                                </div> -->
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- start page title end -->
 
                     <div class="card">
                         <div class="card-header">
-                            <ul class="nav nav-pills d-inline-flex bg-light border rounded p-1 gap-1" id="notificationFilter" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button type="button" class="nav-link active py-1 px-3" data-filter="all">
-                                        सर्व <span class="badge bg-secondary-subtle text-secondary ms-1" data-count="all"></span>
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button type="button" class="nav-link py-1 px-3" data-filter="unread">
-                                        न वाचलेल्या <span class="badge bg-secondary-subtle text-secondary ms-1" data-count="unread"></span>
-                                    </button>
-                                </li>
-                            </ul>
+                            <h4 class="card-title">न वाचलेल्या सूचना</h4>
                         </div>
+
                         <div class="list-group list-group-flush" id="notificationList">
                             <a href="javascript:void(0);" class="list-group-item list-group-item-action d-flex gap-2 py-3" data-unread="1">
                                 <i class="ri-checkbox-blank-circle-fill text-warning fs-10 mt-1"></i>
@@ -70,7 +51,7 @@
                                     <small class="text-muted">08 ऑक्टो. 2026, 11:21</small>
                                 </div>
                             </a>
-                            <a href="javascript:void(0);" class="list-group-item list-group-item-action d-flex gap-2 py-3" data-unread="1">
+                            <a href=";" class="list-group-item list-group-item-action d-flex gap-2 py-3" data-unread="1">
                                 <i class="ri-checkbox-blank-circle-fill text-warning fs-10 mt-1"></i>
                                 <div>
                                     <h6 class="mb-1">बंदोबस्त मंजूर</h6>

@@ -45,14 +45,14 @@
                             <li class="nav-item"><a href="dashboard.php" class="nav-link">डॅशबोर्ड</a></li>
                             <li class="nav-item">
                                 <!-- <a href="notifications.php" class="nav-link">सूचना</a> -->
-                                <a href="#sidebarDailyDuty" class="nav-link" data-bs-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="sidebarDailyDuty">सूचना</a>
-                                <div class="collapse menu-dropdown" id="sidebarDailyDuty">
+                                <a href="#sidebarNotifications" class="nav-link" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarNotifications">सूचना</a>
+                                <div class="collapse menu-dropdown" id="sidebarNotifications">
                                     <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item"><a href="daily-duty.php" class="nav-link">
+                                        <li class="nav-item"><a href="all-notifications.php" class="nav-link">
                                                 सर्व
                                             </a></li>
-                                        <li class="nav-item"><a href="daily-duty-create.php" class="nav-link">
+                                        <li class="nav-item"><a href="unseen-notifications.php" class="nav-link">
                                                 न वाचलेल्या
                                             </a></li>
                                     </ul>
@@ -104,17 +104,17 @@
                             <li class="nav-item"><a href="attendance.php" class="nav-link">हजेरी नोंदवही</a></li>
                             <li class="nav-item"><a href="leave.php" class="nav-link">रजा व्यवस्थापन</a></li>
                             <li class="nav-item">
-                                <!-- <a href="show-cause-notice.php" class="nav-link">कारणे दाखवा नोटीस</a> -->
+                                <a href="show-cause-notice.php" class="nav-link">कारणे दाखवा नोटीस</a>
 
-                                <a href="#sidebarDailyDuty" class="nav-link" data-bs-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="sidebarDailyDuty">कारणे दाखवा नोटीस</a>
-                                <div class="collapse menu-dropdown" id="sidebarDailyDuty">
+                                <a href="#sidebarShowCause" class="nav-link" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarShowCause">कारणे दाखवा नोटीस</a>
+                                <div class="collapse menu-dropdown" id="sidebarShowCause">
                                     <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item"><a href="daily-duty.php" class="nav-link">गैरहजर - नोटीस बाकी</a></li>
-                                        <li class="nav-item"><a href="daily-duty-create.php" class="nav-link">खुलासा प्रलंबित</a></li>
-                                        <li class="nav-item"><a href="duty-recruitment-attendance.php"
+                                        <li class="nav-item"><a href="absent-notice-pending.php" class="nav-link">गैरहजर - नोटीस बाकी</a></li>
+                                        <li class="nav-item"><a href="disclosure-pending.php" class="nav-link">खुलासा प्रलंबित</a></li>
+                                        <li class="nav-item"><a href="received-disclosure.php"
                                                 class="nav-link">खुलासा प्राप्त</a></li>
-                                        <li class="nav-item"><a href="duty-recruitment-attendance.php"
+                                        <li class="nav-item"><a href="proceeding-complete.php"
                                                 class="nav-link">कार्यवाही पूर्ण</a></li>
                                     </ul>
                                 </div>
@@ -141,9 +141,9 @@
                             <li class="nav-item"><a href="employees.php" class="nav-link">कर्मचारी (ॲप)</a></li>
                             <li class="nav-item">
                                 <!-- <a href="face-registration.php" class="nav-link">चेहरा नोंदणी</a> -->
-                                <a href="#sidebarDailyDuty" class="nav-link" data-bs-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="sidebarDailyDuty">चेहरा नोंदणी</a>
-                                <div class="collapse menu-dropdown" id="sidebarDailyDuty">
+                                <a href="#sidebarFaceRegistration" class="nav-link" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarFaceRegistration">चेहरा नोंदणी</a>
+                                <div class="collapse menu-dropdown" id="sidebarFaceRegistration">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item"><a href="daily-duty.php" class="nav-link">
                                                 सर्व

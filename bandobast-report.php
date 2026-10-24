@@ -108,132 +108,103 @@
                     </div>
 
 
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">बंदोबस्तनिहाय</h5>
-                                </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-                                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
-                                        </button>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+
+
+
+
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th class="col-2">बंदोबस्त</th>
+                                                    <th>दिनांक</th>
+                                                    <th>स्थिती</th>
+                                                    <th>मागणी</th>
+                                                    <th>स्वीकृत</th>
+                                                    <th>नियुक्त</th>
+                                                    <th>ड्युटी-दिवस</th>
+                                                    <th>उपस्थित</th>
+                                                    <th>गैरहजर</th>
+                                                    <th>%</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>10 ऑक्टो, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td>120</td>
+                                                    <td>111</td>
+                                                    <td>8</td>
+                                                    <td>48</td>
+                                                    <td>4</td>
+                                                    <td>44</td>
+                                                   <td class="d-flex align-items-center gap-2">
+                                                        <div class="progress flex-grow-1" style="min-width: 120px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                         <span class="fs-12 fw-medium">20%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>व्हीआयपी दौरा – कराड</td>
+                                                    <td>18 ऑक्टो, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td> 90</td>
+                                                    <td> 90</td>
+                                                    <td> 3</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td class="d-flex align-items-center gap-2">
+                                                        <div class="progress flex-grow-1" style="min-width: 120px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                         <span class="fs-12 fw-medium">20%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>10 ऑक्टो, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td>120</td>
+                                                    <td>111</td>
+                                                    <td>8</td>
+                                                    <td>48</td>
+                                                    <td>4</td>
+                                                    <td>44</td>
+                                                    <td class="d-flex align-items-center gap-2">
+                                                        <div class="progress flex-grow-1" style="min-width: 120px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                         <span class="fs-12 fw-medium">20%</span>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>बंदोबस्त</th>
-                                            <th>दिनांक</th>
-                                            <th>स्थिती</th>
-                                            <th class="col-num">मागणी</th>
-                                            <th class="col-num">स्वीकृत</th>
-                                            <th class="col-num">नियुक्त</th>
-                                            <th class="col-num">ड्युटी-दिवस</th>
-                                            <th class="col-num">उपस्थित</th>
-                                            <th class="col-num">गैरहजर</th>
-                                            <th class="min-w-sm">%</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">नवरात्रोत्सव बंदोबस्त – सातारा शहर</div></td>
-                                            <td class="text-nowrap">10 ऑक्टो, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">120</td>
-                                            <td class="col-num">111</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">48</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">44</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">8%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">व्हीआयपी दौरा – कराड</div></td>
-                                            <td class="text-nowrap">18 ऑक्टो, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">90</td>
-                                            <td class="col-num">90</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">दसरा मिरवणूक – फलटण</div></td>
-                                            <td class="text-nowrap">20 ऑक्टो, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">60</td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
-                                            <td class="text-nowrap">25 सप्टें, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">300</td>
-                                            <td class="col-num">285</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">10</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">5</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 4 पैकी 4 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    </div><!--end row-->
                 </div>
                 <!-- container-fluid -->
             </div>
