@@ -28,7 +28,7 @@
                     <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>डॅशबोर्ड</h2>
-                           <p class="text-muted">सातारा जिल्हा पोलीस मुख्यालय · मुख्यालय</p>
+                            <p class="text-muted">सातारा जिल्हा पोलीस मुख्यालय · मुख्यालय</p>
                         </div>
                         <a href="bandobast-create.php">
                             <button type="button" class="btn btn-primary waves-effect waves-light d-flex align-items-center">
@@ -39,83 +39,108 @@
 
                     </div>
 
-                    <div class="d-flex flex-wrap m-2 align-items-center">
-                        <div class="card card-animate flex-fill">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0 me-3">
-                                        <span class="avatar-title bg-info-subtle rounded fs-3">
-                                            <i class="ri-shield-check-line text-info"></i>
-                                        </span>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5">
+                        <div class="col">
+                            <div class="card card-animate">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="fw-medium text-muted mb-0">एकूण बंदोबस्त</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">6</h2>
+                                            <p class="mb-0 text-muted">4 मंजूर 1 अंतिम मंजुरी बाकी</p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                    <i class="ri-shield-check-line text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">एकूण बंदोबस्त</p>
-                                        <h3 class="mt-1 mb-0 ff-secondary fw-semibold">6</h3>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </div>
                         </div>
-                        <div class="card card-animate mx-2 flex-fill">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0 me-3">
-                                        <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                            <i class=" ri-time-line text-primary"></i>
-                                        </span>
+
+                        <div class="col">
+                            <div class="card card-animate">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="fw-medium text-muted mb-0">चालू बंदोबस्त (आज)</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">1</h2>
+                                            <p class="mb-0 text-muted">4 मंजूर 1 अंतिम मंजुरी बाकी</p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                    <i class="ri-time-line text-primary"></i>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">चालू बंदोबस्त (आज)</p>
-                                        <h3 class="mt-1 mb-0 ff-secondary fw-semibold">1</h3>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </div>
                         </div>
-                        <div class="card card-animate mx-2 flex-fill">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0 me-3">
-                                        <span class="avatar-title bg-success-subtle rounded fs-3">
-                                            <i class=" ri-camera-line text-success"></i>
-                                        </span>
+
+                        <div class="col">
+                            <div class="card card-animate">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="fw-medium text-muted mb-0">आजची हजेरी</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">0/8</h2>
+                                            <p class="mb-0 text-muted">आज ड्युटी नाही</p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                    <i class="ri-camera-line text-success"></i>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">आजची हजेरी</p>
-                                        <h3 class="mt-1 mb-0 ff-secondary fw-semibold">0/8</h3>
-                                        <!-- <small class="text-muted">94%</small> -->
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </div>
                         </div>
-                        <div class="card card-animate mx-2 flex-fill">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0 me-3">
-                                        <span class="avatar-title bg-info-subtle rounded fs-3">
-                                            <i class="ri-group-line  text-info"></i>
-                                        </span>
+                        <div class="col">
+                            <div class="card card-animate">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="fw-medium text-muted mb-0">मागणी केलेले मनुष्यबळ</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">732</h2>
+                                            <p class="mb-0 text-muted">536 मंजूर</p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                    <i class="ri-group-line  text-info"></i>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">मागणी केलेले मनुष्यबळ</p>
-                                        <h3 class="mt-1 mb-0 ff-secondary fw-semibold">732</h3>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </div>
                         </div>
-                        <div class="card card-animate mx-2 flex-fill">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0 me-3">
-                                        <span class="avatar-title bg-success-subtle rounded fs-3">
-                                            <i class=" ri-file-forbid-line text-success"></i>
-                                        </span>
+                        <div class="col">
+                            <div class="card card-animate">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="fw-medium text-muted mb-0">नोटीस प्रलंबित</p>
+                                            <h2 class="mt-4 ff-secondary fw-semibold">1</h2>
+                                            <p class="mb-0 text-muted">खुलासा / कार्यवाही बाकी</p>
+                                        </div>
+                                        <div>
+                                            <div class="avatar-sm flex-shrink-0">
+                                                <span class="avatar-title bg-info-subtle rounded-circle fs-2">
+                                                    <i class="ri-file-forbid-line text-success"></i>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">नोटीस प्रलंबित</p>
-                                        <h3 class="mt-1 mb-0 ff-secondary fw-semibold">1</h3>
-                                        <!-- <small class="text-muted">9/58</small> -->
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
+                                </div><!-- end card body -->
+                            </div>
                         </div>
                     </div>
 
@@ -124,18 +149,24 @@
 
                         <div class="col-xl-8">
                             <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">दिनांकनिहाय हजेरी</h4>
-                                    <p>मागील 21 दिवस · चेहरा-पडताळणी ॲप हजेरी</p>
+                                <div class="card-header d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <h4 class="card-title mb-0">दिनांकनिहाय हजेरी</h4>
+                                        <p>मागील 21 दिवस · चेहरा-पडताळणी ॲप हजेरी</p>
+                                    </div>
+                                    <div class="flex-shrink-0 d-flex flex-wrap justify-content-end gap-3">
+                                        <span class="d-flex align-items-center"><i class="ri-checkbox-blank-circle-fill text-success me-1"></i>हजर</span>
+                                        <span class="d-flex align-items-center"><i class="ri-checkbox-blank-circle-fill text-danger me-1"></i>गैरहजर</span>
+                                    </div>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
-                                    <div id="column_stacked_chart" data-colors='["rgb(26, 199, 6)", "rgb(226, 14, 14)"]' class="apex-charts" dir="ltr"></div>
+                                    <div id="column_stacked_chart" data-colors='["--vz-success", "--vz-danger"]' class="apex-charts" dir="ltr"></div>
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div>
 
-                        <div class="col-xl-4">  
+                        <div class="col-xl-4">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title mb-0">कार्य प्रगती</h4>
@@ -184,9 +215,15 @@
                     <div class="row">
                         <div class="col-xl-8">
                             <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-0">पोलीस ठाणेनिहाय मनुष्यबळ</h4>
-                                    <p>मागणी विरुद्ध मंजूर · नामंजूर बंदोबस्त वगळून</p>
+                                <div class="card-header d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <h4 class="card-title mb-0">पोलीस ठाणेनिहाय मनुष्यबळ</h4>
+                                        <p>मागणी विरुद्ध मंजूर · नामंजूर बंदोबस्त वगळून</p>
+                                    </div>
+                                    <div class="flex-shrink-0 d-flex flex-wrap justify-content-end gap-3">
+                                        <span class="d-flex align-items-center"><i class="ri-checkbox-blank-circle-fill text-primary me-1"></i>मागणी</span>
+                                        <span class="d-flex align-items-center"><i class="ri-checkbox-blank-circle-fill text-success me-1"></i>मंजूर</span>
+                                    </div>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
@@ -202,7 +239,22 @@
                                 </div><!-- end card header -->
 
                                 <div class="card-body">
-                                    <div id="simple_dount_chart" data-colors='["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
+                                    <div id="simple_dount_chart" data-colors='["--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
+
+                                    <ul class="list-unstyled mb-0 mt-3">
+                                        <li class="d-flex justify-content-between align-items-center py-1">
+                                            <span class="d-flex align-items-center"><i class="ri-checkbox-blank-fill text-warning fs-16 me-2"></i>प्रलंबित</span>
+                                            <span class="fw-semibold">1</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center py-1">
+                                            <span class="d-flex align-items-center"><i class="ri-checkbox-blank-fill text-danger fs-16 me-2"></i>नामंजूर</span>
+                                            <span class="fw-semibold">1</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between align-items-center py-1">
+                                            <span class="d-flex align-items-center"><i class="ri-checkbox-blank-fill text-info fs-16 me-2"></i>पूर्ण</span>
+                                            <span class="fw-semibold">1</span>
+                                        </li>
+                                    </ul>
                                 </div><!-- end card-body -->
                             </div><!-- end card -->
                         </div>
@@ -229,7 +281,7 @@
                                 </div>
 
 
-                                
+
 
 
                                 <div class="card-body p-0">
@@ -416,7 +468,7 @@
         function getChartColors(id) {
             var el = document.getElementById(id);
             if (!el) return [];
-            return JSON.parse(el.getAttribute('data-colors')).map(function (v) {
+            return JSON.parse(el.getAttribute('data-colors')).map(function(v) {
                 var c = getComputedStyle(document.documentElement).getPropertyValue(v.trim()).trim();
                 return c || v;
             });
@@ -424,63 +476,160 @@
 
         // 1. दिनांकनिहाय हजेरी — मागील 21 दिवस (dummy data)
         var attendanceChart = new ApexCharts(document.querySelector('#column_stacked_chart'), {
-            chart: { type: 'bar', height: 350, stacked: true, toolbar: { show: false } },
-            series: [
-                { name: 'हजर', data: [0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                { name: 'गैरहजर', data: [0, 0, 0, 0, 0, 0, 0, 4, 8, 8, 8, 8, 8, 8, 8, 11, 8, 10, 0, 0, 0] }
+            chart: {
+                type: 'bar',
+                height: 350,
+                stacked: true,
+                toolbar: {
+                    show: false
+                }
+            },
+            series: [{
+                    name: 'हजर',
+                    data: [0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                },
+                {
+                    name: 'गैरहजर',
+                    data: [0, 0, 0, 0, 0, 0, 0, 4, 8, 8, 8, 8, 8, 8, 8, 11, 8, 10, 0, 0, 0]
+                }
             ],
             xaxis: {
                 categories: ['3/10', '4/10', '5/10', '6/10', '7/10', '8/10', '9/10', '10/10', '11/10', '12/10', '13/10',
-                    '14/10', '15/10', '16/10', '17/10', '18/10', '19/10', '20/10', '21/10', '22/10', '23/10']
+                    '14/10', '15/10', '16/10', '17/10', '18/10', '19/10', '20/10', '21/10', '22/10', '23/10'
+                ]
             },
-            plotOptions: { bar: { columnWidth: '60%', borderRadius: 4 } },
-            dataLabels: { enabled: false },
-            legend: { position: 'bottom' },
+            plotOptions: {
+                bar: {
+                    columnWidth: '60%',
+                    borderRadius: 4
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
             colors: getChartColors('column_stacked_chart')
         });
         attendanceChart.render();
 
         // 2. पोलीस ठाणेनिहाय मनुष्यबळ — मागणी विरुद्ध मंजूर (dummy data)
         var stationChart = new ApexCharts(document.querySelector('#grouped_bar'), {
-            chart: { type: 'bar', height: 360, toolbar: { show: false } },
-            series: [
-                { name: 'मागणी', data: [335, 166, 81, 70, 60, 20] },
-                { name: 'मंजूर', data: [229, 122, 45, 70, 50, 20] }
+            chart: {
+                type: 'bar',
+                height: 360,
+                toolbar: {
+                    show: false
+                }
+            },
+            series: [{
+                    name: 'मागणी',
+                    data: [335, 166, 81, 70, 60, 20]
+                },
+                {
+                    name: 'मंजूर',
+                    data: [229, 122, 45, 70, 50, 20]
+                }
             ],
             xaxis: {
                 categories: ['सातारा शहर पोलीस ठाणे', 'शाहूपुरी पोलीस ठाणे', 'सातारा तालुका पोलीस ठाणे',
-                    'कराड शहर पोलीस ठाणे', 'फलटण शहर पोलीस ठाणे', 'कराड तालुका पोलीस ठाणे'],
-                labels: { show: false },
-                axisBorder: { show: false },
-                axisTicks: { show: false }
+                    'कराड शहर पोलीस ठाणे', 'फलटण शहर पोलीस ठाणे', 'कराड तालुका पोलीस ठाणे'
+                ],
+                labels: {
+                    show: false
+                },
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                }
             },
             yaxis: {
-                labels: { maxWidth: 220, style: { fontSize: '13px', fontWeight: 500 } }
+                labels: {
+                    maxWidth: 220,
+                    style: {
+                        fontSize: '13px',
+                        fontWeight: 500
+                    }
+                }
             },
             grid: {
-                xaxis: { lines: { show: false } },
-                yaxis: { lines: { show: false } }
+                xaxis: {
+                    lines: {
+                        show: false
+                    }
+                },
+                yaxis: {
+                    lines: {
+                        show: false
+                    }
+                }
             },
             plotOptions: {
-                bar: { horizontal: true, barHeight: '80%', borderRadius: 4, dataLabels: { position: 'top' } }
+                bar: {
+                    horizontal: true,
+                    barHeight: '80%',
+                    borderRadius: 4,
+                    dataLabels: {
+                        position: 'top'
+                    }
+                }
             },
-            stroke: { show: true, width: 2, colors: ['transparent'] },
-            dataLabels: { enabled: true, offsetX: 22, style: { fontSize: '11px', fontWeight: 600, colors: ['#495057'] } },
-            legend: { position: 'top', horizontalAlign: 'right', markers: { radius: 2 } },
-            tooltip: { shared: true, intersect: false },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            dataLabels: {
+                enabled: true,
+                offsetX: 22,
+                style: {
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    colors: ['#495057']
+                }
+            },
+            legend: {
+                show: false
+            },
+            tooltip: {
+                shared: true,
+                intersect: false
+            },
             colors: getChartColors('grouped_bar')
         });
         stationChart.render();
 
         // 3. बंदोबस्त स्थिती — एकूण 6 (dummy data)
         var statusChart = new ApexCharts(document.querySelector('#simple_dount_chart'), {
-            chart: { type: 'donut', height: 320 },
-            series: [1, 2, 1, 1, 1],
-            labels: ['चालू', 'मंजूर', 'प्रलंबित', 'नामंजूर', 'पूर्ण'],
-            legend: { position: 'bottom' },
-            dataLabels: { dropShadow: { enabled: false } },
+            chart: {
+                type: 'donut',
+                height: 240
+            },
+            series: [1, 1, 1],
+            labels: ['प्रलंबित', 'नामंजूर', 'पूर्ण'],
+            legend: {
+                show: false
+            },
+            dataLabels: {
+                dropShadow: {
+                    enabled: false
+                }
+            },
             plotOptions: {
-                pie: { donut: { labels: { show: true, total: { show: true, label: 'एकूण' } } } }
+                pie: {
+                    donut: {
+                        labels: {
+                            show: true,
+                            total: {
+                                show: true,
+                                label: 'एकूण'
+                            }
+                        }
+                    }
+                }
             },
             colors: getChartColors('simple_dount_chart')
         });

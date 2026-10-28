@@ -195,7 +195,7 @@ $pageTitle = 'दैनंदिन ड्युटी — कर्मचार
                                                         <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="संपादित करा">
                                                             <i class="ri-pencil-line"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                             <i class="ri-delete-bin-line"></i>
                                                         </button>
                                                     </div>
@@ -346,7 +346,7 @@ $pageTitle = 'दैनंदिन ड्युटी — कर्मचार
                                                         <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="बदला">
                                                             <i class="ri-pencil-line"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action" title="काढून टाका">
+                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action sa-warning" title="काढून टाका">
                                                             <i class="ri-delete-bin-line"></i>
                                                         </button>
                                                     </div>
@@ -379,7 +379,7 @@ $pageTitle = 'दैनंदिन ड्युटी — कर्मचार
                                                         <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="बदला">
                                                             <i class="ri-pencil-line"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action" title="काढून टाका">
+                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action sa-warning" title="काढून टाका">
                                                             <i class="ri-delete-bin-line"></i>
                                                         </button>
                                                     </div>
@@ -416,7 +416,7 @@ $pageTitle = 'दैनंदिन ड्युटी — कर्मचार
                                                         <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="बदला">
                                                             <i class="ri-pencil-line"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action" title="काढून टाका">
+                                                        <button type="button" class="btn btn-ghost-danger btn-icon btn-action sa-warning" title="काढून टाका">
                                                             <i class="ri-delete-bin-line"></i>
                                                         </button>
                                                     </div>

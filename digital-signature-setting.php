@@ -13,8 +13,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">माझी डिजिटल स्वाक्षरी</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">माझी डिजिटल स्वाक्षरी</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -27,13 +27,11 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
-                        <div class="page-title ">
+                    <div class="d-flex justify-content-between align-items-center p-1">
+                        <div class="page-title">
                             <h2>माझी डिजिटल स्वाक्षरी</h2>
                             <p>फक्त लॉगिन केलेले अधिकारी स्वतःची सही येथे देतात — ती आदेश, नोटीस व अहवाल PDF वर छापली जाते</p>
                         </div>
-                        <!-- <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#addVibhagModal">
-                            पोलीस ठाणे जोडा</button> -->
                     </div>
 
                     <!-- My Signature Card -->

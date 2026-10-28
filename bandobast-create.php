@@ -476,7 +476,7 @@ $pageTitle = 'New Bandobast';
                                                                     <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                         <i class="ri-group-line"></i>
                                                                     </button>
-                                                                    <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                                    <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                         <i class="ri-delete-bin-line"></i>
                                                                     </button>
                                                                 </div>

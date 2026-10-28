@@ -1,13 +1,5 @@
-
 <?php include 'component/head.php'; ?>
 
-<style>
-    body {
-        font-family: 'Eczar', sans-serif;
-        line-height: 1.7;
-        /* Devanagari needs more height or matras get clipped */
-    }
-</style>
 
 <body>
     <div class="layout-wrapper">
@@ -21,8 +13,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">गैरहजेरी व कारणे दाखवा नोटीस अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">गैरहजेरी व कारणे दाखवा नोटीस अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -35,20 +27,15 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>गैरहजेरी व कारणे दाखवा नोटीस अहवाल</h2>
                             <p>गैरहजर कर्मचारी, जारी नोटीस, खुलासा व कार्यवाही</p>
                         </div>
-                        <div class="d-flex">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (CSV)</span></button>
 
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF अहवाल</span>
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
                     </div>
 
                     <div class="d-flex mx-2 align-items-center">
@@ -114,8 +101,90 @@
                         </div>
                     </div>
 
+
+
+
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">गैरहजर कर्मचारी</h5>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>दिनांक</th>
+                                                    <th>कर्मचारी</th>
+                                                    <th>बक्कल</th>
+                                                    <th>पोलीस ठाणे</th>
+                                                    <th>बंदोबस्त</th>
+                                                    <th>ड्युटी पॉइंट</th>
+                                                    <th>नोटीस</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>15 ऑक्टो, 2026</td>
+                                                    <td>संतोष पवार </td>
+                                                    <td>
+                                                        4521
+                                                    </td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>राजवाडा चौक – मुख्य प्रवेशद्वार</td>
+                                                    <td>नोटीस जारी नाही</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>15 ऑक्टो, 2026</td>
+                                                    <td>संतोष पवार </td>
+                                                    <td>
+                                                        4521
+                                                    </td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>राजवाडा चौक – मुख्य प्रवेशद्वार</td>
+                                                    <td>नोटीस जारी नाही</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>15 ऑक्टो, 2026</td>
+                                                    <td>संतोष पवार </td>
+                                                    <td>
+                                                        4521
+                                                    </td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>राजवाडा चौक – मुख्य प्रवेशद्वार</td>
+                                                    <td>नोटीस जारी नाही</td>
+
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+
+
+
+
                     <!-- गैरहजर कर्मचारी -->
-                    <div class="card">
+                    <!-- <div class="card">
                         <div class="card-header">
                             <div class="row g-3 align-items-center">
                                 <div class="col-md">
@@ -123,9 +192,7 @@
                                 </div>
                                 <div class="col-md-auto">
                                     <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
+                                      
                                         <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
                                             <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
                                         </button>
@@ -153,7 +220,9 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">संतोष पवार</div></td>
+                                            <td>
+                                                <div class="cell-title">संतोष पवार</div>
+                                            </td>
                                             <td class="col-num">4521</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -162,7 +231,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">अमोल कदम</div></td>
+                                            <td>
+                                                <div class="cell-title">अमोल कदम</div>
+                                            </td>
                                             <td class="col-num">6734</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -171,7 +242,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">महेश घोरपडे</div></td>
+                                            <td>
+                                                <div class="cell-title">महेश घोरपडे</div>
+                                            </td>
                                             <td class="col-num">4410</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -180,7 +253,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">प्रिया मोरे</div></td>
+                                            <td>
+                                                <div class="cell-title">प्रिया मोरे</div>
+                                            </td>
                                             <td class="col-num">7012</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -189,7 +264,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">गणेश भोसले</div></td>
+                                            <td>
+                                                <div class="cell-title">गणेश भोसले</div>
+                                            </td>
                                             <td class="col-num">2208</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -198,7 +275,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">स्वप्नील शिंदे</div></td>
+                                            <td>
+                                                <div class="cell-title">स्वप्नील शिंदे</div>
+                                            </td>
                                             <td class="col-num">10007</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -207,7 +286,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">अनिल यादव</div></td>
+                                            <td>
+                                                <div class="cell-title">अनिल यादव</div>
+                                            </td>
                                             <td class="col-num">10163</td>
                                             <td>शाहूपुरी पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -216,7 +297,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">प्रशांत घाडगे</div></td>
+                                            <td>
+                                                <div class="cell-title">प्रशांत घाडगे</div>
+                                            </td>
                                             <td class="col-num">10008</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -225,7 +308,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">14 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">संतोष पवार</div></td>
+                                            <td>
+                                                <div class="cell-title">संतोष पवार</div>
+                                            </td>
                                             <td class="col-num">4521</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -234,7 +319,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">14 ऑक्टो, 2026</td>
-                                            <td><div class="cell-title">अमोल कदम</div></td>
+                                            <td>
+                                                <div class="cell-title">अमोल कदम</div>
+                                            </td>
                                             <td class="col-num">6734</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
@@ -262,10 +349,80 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
+
+
 
                     <!-- कारणे दाखवा नोटीस -->
-                    <div class="card">
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">कारणे दाखवा नोटीस</h5>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="showcause-datatables" class="table table-bordered nowrap align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th class="col-2">
+                                                        जा. क्र.</th>
+                                                    <th>कर्मचारी</th>
+                                                    <th>गैरहजर दिनांक</th>
+                                                    <th>जारी करणारे</th>
+                                                    <th>स्थिती</th>
+                                                    <th>खुलासा</th>
+                                                    <th>कार्यवाही</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>सा.पो./कानो/2026/001</td>
+                                                    <td>अश्विनी जगताप</td>
+                                                    <td>25 सप्टें, 2026</td>
+                                                    <td>विजय मोहिते</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">कार्यवाही पूर्ण</span>
+                                                    </td>
+                                                    <td>प्राप्त</td>
+                                                    <td>ताकीद (समज) देऊन बंद</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>सा.पो./कानो/2026/002</td>
+                                                    <td>प्रिया मोरे</td>
+                                                    <td>10 ऑक्टो, 2026</td>
+                                                    <td>राहुल शिंदे</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-warning-subtle text-warning">खुलासा प्रलंबित</span>
+                                                    </td>
+                                                    <td>नाही</td>
+                                                    <td>—</td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+
+
+
+
+                    <!-- कारणे दाखवा नोटीस -->
+                    <!-- <div class="card">
                         <div class="card-header">
                             <div class="row g-3 align-items-center">
                                 <div class="col-md">
@@ -273,9 +430,7 @@
                                 </div>
                                 <div class="col-md-auto">
                                     <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
+                                    \
                                         <button type="button" class="btn btn-soft-secondary">
                                             <i class="ri-download-line align-bottom me-1"></i> CSV
                                         </button>
@@ -300,7 +455,9 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-nowrap">सा.पो./कानो/2026/001</td>
-                                            <td><div class="cell-title">अश्विनी जगताप</div></td>
+                                            <td>
+                                                <div class="cell-title">अश्विनी जगताप</div>
+                                            </td>
                                             <td class="text-nowrap">25 सप्टें, 2026</td>
                                             <td>विजय मोहिते</td>
                                             <td><span class="badge rounded-pill bg-success-subtle text-success">कार्यवाही पूर्ण</span></td>
@@ -309,7 +466,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-nowrap">सा.पो./कानो/2026/002</td>
-                                            <td><div class="cell-title">प्रिया मोरे</div></td>
+                                            <td>
+                                                <div class="cell-title">प्रिया मोरे</div>
+                                            </td>
                                             <td class="text-nowrap">10 ऑक्टो, 2026</td>
                                             <td>राहुल शिंदे</td>
                                             <td><span class="badge rounded-pill bg-warning-subtle text-warning">खुलासा प्रलंबित</span></td>
@@ -337,19 +496,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
+
+
 
                     <!-- नोटीसवरील कार्यवाही — सारांश -->
                     <div class="card p-3">
                         <div class="px-2">
                             <h4 class="page-title mb-3">नोटीसवरील कार्यवाही — सारांश</h4>
-                                <div class="d-flex align-items-center gap-3 mb-2">
-                                    <span class="flex-shrink-0" style="min-width: 200px;">ताकीद (समज) देऊन बंद</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <b class="flex-shrink-0">1</b>
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <span class="flex-shrink-0" style="min-width: 200px;">ताकीद (समज) देऊन बंद</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
+                                <b class="flex-shrink-0">1</b>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -438,6 +600,12 @@
                 // render calendar inside the modal so its focus trap doesn't block the calendar
                 static: !!el.closest('.modal')
             });
+        });
+
+        // second buttons table (ids must be unique, so it can't reuse #buttons-datatables)
+        new DataTable('#showcause-datatables', {
+            dom: 'Bfrtip',
+            buttons: ['copy', 'csv', 'excel', 'print', 'pdf']
         });
     </script>
 </body>

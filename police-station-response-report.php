@@ -13,8 +13,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">पोलीस ठाणे प्रतिसाद अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">पोलीस ठाणे प्रतिसाद अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -27,23 +27,18 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>पोलीस ठाणे प्रतिसाद अहवाल</h2>
                             <p>मनुष्यबळ मागणीवर ठाण्यांचे प्रतिसाद — पूर्ण / अंशतः / नाकार / प्रलंबित</p>
                         </div>
-                        <div class="d-flex">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (CSV)</span></button>
 
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF अहवाल</span>
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
                     </div>
 
-                    <div class="d-flex mx-2 align-items-center">
+                    <div class="d-flex  align-items-center">
                         <div class="card card-animate mx-2 flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
@@ -107,279 +102,274 @@
                     </div>
 
                     <!-- कारणनिहाय — अंशतः मंजुरी / नामंजुरी -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">कारणनिहाय — अंशतः मंजुरी / नामंजुरी</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">कारणनिहाय — अंशतः मंजुरी / नामंजुरी</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-                                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
-                                        </button>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>कारण (नाकारण्याचा नमुना)</th>
+                                                    <th>अंशतः मंजूर</th>
+                                                    <th>नामंजूर</th>
+                                                    <th>कमी पडलेले मनुष्यबळ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>कर्मचारी अन्य बंदोबस्तावर</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>कर्मचारी रजेवर</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>आधीच अन्य बंदोबस्त नियोजित</td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>प्रशिक्षणासाठी कर्मचारी प्रतिनियुक्त</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>न्यायालयीन कामकाज / साक्ष</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>रात्र गस्त व नाकाबंदी</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>निवडणूक कर्तव्यासाठी राखीव</td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>वाहन / साधनसामग्रीची कमतरता</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>अपुरी पूर्वसूचना</td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>12</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>कारण (नाकारण्याचा नमुना)</th>
-                                            <th class="col-num">अंशतः मंजूर</th>
-                                            <th class="col-num">नामंजूर</th>
-                                            <th class="col-num">कमी पडलेले मनुष्यबळ</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</div></td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">24</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">कर्मचारी अन्य बंदोबस्तावर</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">कर्मचारी रजेवर</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">10</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">आधीच अन्य बंदोबस्त नियोजित</div></td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">25</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">प्रशिक्षणासाठी कर्मचारी प्रतिनियुक्त</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">6</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">न्यायालयीन कामकाज / साक्ष</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">4</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">रात्र गस्त व नाकाबंदी</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">8</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">निवडणूक कर्तव्यासाठी राखीव</div></td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">15</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">वाहन / साधनसामग्रीची कमतरता</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">5</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">अपुरी पूर्वसूचना</div></td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">12</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 10 पैकी 10 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                     <!-- पोलीस ठाणे प्रतिसाद तपशील -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">पोलीस ठाणे प्रतिसाद तपशील</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">पोलीस ठाणे प्रतिसाद तपशील</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>बंदोबस्त</th>
+                                                    <th>पोलीस ठाणे</th>
+                                                    <th>मागणी</th>
+                                                    <th>स्वीकृत</th>
+                                                    <th>यादी</th>
+                                                    <th>प्रतिसाद</th>
+                                                    <th>दिनांक</th>
+                                                    <th>कारण (नमुना)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>79</td>
+                                                    <td>79</td>
+                                                    <td>79/79</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">पूर्ण मंजूर</span>
+                                                    </td>
+                                                    <td>06 ऑक्टो, 2026</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>41</td>
+                                                    <td>32</td>
+                                                    <td>32/32</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-warning-subtle text-warning">अंशतः मंजूर</span>
+                                                    </td>
+                                                    <td>06 ऑक्टो, 2026</td>
+                                                    <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>व्हीआयपी दौरा – कराड</td>
+                                                    <td>कराड शहर पोलीस ठाणे</td>
+                                                    <td>70</td>
+                                                    <td>70</td>
+                                                    <td>67/70</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">पूर्ण मंजूर</span>
+                                                    </td>
+                                                    <td>09 ऑक्टो, 2026</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>व्हीआयपी दौरा – कराड</td>
+                                                    <td>कराड तालुका पोलीस ठाणे</td>
+                                                    <td>20</td>
+                                                    <td>20</td>
+                                                    <td>20/20</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">पूर्ण मंजूर</span>
+                                                    </td>
+                                                    <td>10 ऑक्टो, 2026</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>दसरा मिरवणूक – फलटण</td>
+                                                    <td>फलटण शहर पोलीस ठाणे</td>
+                                                    <td>60</td>
+                                                    <td>50</td>
+                                                    <td>50/50</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-warning-subtle text-warning">अंशतः मंजूर</span>
+                                                    </td>
+                                                    <td>06 ऑक्टो, 2026</td>
+                                                    <td>कर्मचारी अन्य बंदोबस्तावर</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>150</td>
+                                                    <td>150</td>
+                                                    <td>137/150</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">पूर्ण मंजूर</span>
+                                                    </td>
+                                                    <td>11 सप्टें, 2026</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>90</td>
+                                                    <td>90</td>
+                                                    <td>89/90</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">पूर्ण मंजूर</span>
+                                                    </td>
+                                                    <td>11 सप्टें, 2026</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</td>
+                                                    <td>सातारा तालुका पोलीस ठाणे</td>
+                                                    <td>60</td>
+                                                    <td>45</td>
+                                                    <td>45/45</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-warning-subtle text-warning">अंशतः मंजूर</span>
+                                                    </td>
+                                                    <td>12 सप्टें, 2026</td>
+                                                    <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>यात्रा बंदोबस्त – वाई</td>
+                                                    <td>वाई पोलीस ठाणे</td>
+                                                    <td>40</td>
+                                                    <td>30</td>
+                                                    <td>30/30</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-warning-subtle text-warning">अंशतः मंजूर</span>
+                                                    </td>
+                                                    <td>14 ऑक्टो, 2026</td>
+                                                    <td>कर्मचारी रजेवर</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>पर्यटन हंगाम बंदोबस्त – महाबळेश्वर</td>
+                                                    <td>महाबळेश्वर पोलीस ठाणे</td>
+                                                    <td>25</td>
+                                                    <td>0</td>
+                                                    <td>0/0</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-danger-subtle text-danger">नामंजूर</span>
+                                                    </td>
+                                                    <td>15 ऑक्टो, 2026</td>
+                                                    <td>आधीच अन्य बंदोबस्त नियोजित</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>बंदोबस्त</th>
-                                            <th>पोलीस ठाणे</th>
-                                            <th class="col-num">मागणी</th>
-                                            <th class="col-num">स्वीकृत</th>
-                                            <th class="col-num">यादी</th>
-                                            <th>प्रतिसाद</th>
-                                            <th>दिनांक</th>
-                                            <th>कारण (नमुना)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">नवरात्रोत्सव बंदोबस्त – सातारा शहर</div></td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">79</td>
-                                            <td class="col-num">79</td>
-                                            <td class="col-num">79/79</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
-                                            <td class="text-nowrap">06 ऑक्टो, 2026</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">नवरात्रोत्सव बंदोबस्त – सातारा शहर</div></td>
-                                            <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">41</td>
-                                            <td class="col-num">32</td>
-                                            <td class="col-num">32/32</td>
-                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
-                                            <td class="text-nowrap">06 ऑक्टो, 2026</td>
-                                            <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">व्हीआयपी दौरा – कराड</div></td>
-                                            <td>कराड शहर पोलीस ठाणे</td>
-                                            <td class="col-num">70</td>
-                                            <td class="col-num">70</td>
-                                            <td class="col-num">67/70</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
-                                            <td class="text-nowrap">09 ऑक्टो, 2026</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">व्हीआयपी दौरा – कराड</div></td>
-                                            <td>कराड तालुका पोलीस ठाणे</td>
-                                            <td class="col-num">20</td>
-                                            <td class="col-num">20</td>
-                                            <td class="col-num">20/20</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
-                                            <td class="text-nowrap">10 ऑक्टो, 2026</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">दसरा मिरवणूक – फलटण</div></td>
-                                            <td>फलटण शहर पोलीस ठाणे</td>
-                                            <td class="col-num">60</td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">50/50</td>
-                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
-                                            <td class="text-nowrap">06 ऑक्टो, 2026</td>
-                                            <td>कर्मचारी अन्य बंदोबस्तावर</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">150</td>
-                                            <td class="col-num">150</td>
-                                            <td class="col-num">137/150</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
-                                            <td class="text-nowrap">11 सप्टें, 2026</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
-                                            <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">90</td>
-                                            <td class="col-num">90</td>
-                                            <td class="col-num">89/90</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">पूर्ण मंजूर</span></td>
-                                            <td class="text-nowrap">11 सप्टें, 2026</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
-                                            <td>सातारा तालुका पोलीस ठाणे</td>
-                                            <td class="col-num">60</td>
-                                            <td class="col-num">45</td>
-                                            <td class="col-num">45/45</td>
-                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
-                                            <td class="text-nowrap">12 सप्टें, 2026</td>
-                                            <td>स्थानिक कायदा-सुव्यवस्थेसाठी राखीव</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">यात्रा बंदोबस्त – वाई</div></td>
-                                            <td>वाई पोलीस ठाणे</td>
-                                            <td class="col-num">40</td>
-                                            <td class="col-num">30</td>
-                                            <td class="col-num">30/30</td>
-                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">अंशतः मंजूर</span></td>
-                                            <td class="text-nowrap">14 ऑक्टो, 2026</td>
-                                            <td>कर्मचारी रजेवर</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पर्यटन हंगाम बंदोबस्त – महाबळेश्वर</div></td>
-                                            <td>महाबळेश्वर पोलीस ठाणे</td>
-                                            <td class="col-num">25</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0/0</td>
-                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">नामंजूर</span></td>
-                                            <td class="text-nowrap">15 ऑक्टो, 2026</td>
-                                            <td>आधीच अन्य बंदोबस्त नियोजित</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 10 पैकी 10 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                 </div>
                 <!-- container-fluid -->

@@ -1,12 +1,5 @@
 <?php include 'component/head.php'; ?>
 
-<style>
-    body {
-        font-family: 'Eczar', sans-serif;
-        line-height: 1.7;
-        /* Devanagari needs more height or matras get clipped */
-    }
-</style>
 
 <body>
     <div class="layout-wrapper">
@@ -20,8 +13,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">प्रवर्गनिहाय मनुष्यबळ अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">प्रवर्गनिहाय मनुष्यबळ अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -34,24 +27,20 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>प्रवर्गनिहाय मनुष्यबळ अहवाल</h2>
                             <p>प्रवर्गनिहाय मागणी, स्वीकृती, यादीतील नावे व तूट</p>
                         </div>
-                        <div class="d-flex">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (CSV)</span></button>
 
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF अहवाल</span>
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
+
                     </div>
 
-                    <div class="d-flex mx-2 align-items-center">
-                        <div class="card card-animate mx-2 flex-fill">
+                    <div class="d-flex mx-1 align-items-center">
+                        <div class="card card-animate flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar-sm flex-shrink-0 me-3">
@@ -114,132 +103,117 @@
                     </div>
 
                     <!-- प्रवर्गनिहाय मनुष्यबळ -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">प्रवर्गनिहाय मनुष्यबळ</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">प्रवर्गनिहाय मनुष्यबळ</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-                                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
-                                        </button>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>प्रवर्ग</th>
+                                                    <th>मागणी</th>
+                                                    <th>स्वीकृत</th>
+                                                    <th>यादीतील नावे</th>
+                                                    <th>तूट</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>वरिष्ठ अधिकारी</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>पोलीस उपायुक्त (DCP)</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>वरिष्ठ पोलीस निरीक्षक</td>
+                                                    <td>6</td>
+                                                    <td>6</td>
+                                                    <td>5</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>पोलीस निरीक्षक</td>
+                                                    <td>12</td>
+                                                    <td>12</td>
+                                                    <td>11</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>सहायक पोलीस निरीक्षक</td>
+                                                    <td>19</td>
+                                                    <td>19</td>
+                                                    <td>17</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>पोलीस हवालदार</td>
+                                                    <td>59</td>
+                                                    <td>56</td>
+                                                    <td>56</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>पुरुष पोलीस शिपाई</td>
+                                                    <td>250</td>
+                                                    <td>230</td>
+                                                    <td>230</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>महिला पोलीस शिपाई</td>
+                                                    <td>99</td>
+                                                    <td>93</td>
+                                                    <td>93</td>
+                                                    <td>6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>वाहतूक पोलीस</td>
+                                                    <td>58</td>
+                                                    <td>56</td>
+                                                    <td>46</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>सर्वसाधारण दल (आम फोर्स)</td>
+                                                    <td>50</td>
+                                                    <td>47</td>
+                                                    <td>47</td>
+                                                    <td>3</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>प्रवर्ग</th>
-                                            <th class="col-num">मागणी</th>
-                                            <th class="col-num">स्वीकृत</th>
-                                            <th class="col-num">यादीतील नावे</th>
-                                            <th class="col-num">तूट</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">वरिष्ठ अधिकारी</div></td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पोलीस उपायुक्त (DCP)</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">वरिष्ठ पोलीस निरीक्षक</div></td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पोलीस निरीक्षक</div></td>
-                                            <td class="col-num">12</td>
-                                            <td class="col-num">12</td>
-                                            <td class="col-num">11</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">सहायक पोलीस निरीक्षक</div></td>
-                                            <td class="col-num">19</td>
-                                            <td class="col-num">19</td>
-                                            <td class="col-num">17</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पोलीस हवालदार</div></td>
-                                            <td class="col-num">59</td>
-                                            <td class="col-num">56</td>
-                                            <td class="col-num">56</td>
-                                            <td class="col-num">3</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पुरुष पोलीस शिपाई</div></td>
-                                            <td class="col-num">250</td>
-                                            <td class="col-num">230</td>
-                                            <td class="col-num">230</td>
-                                            <td class="col-num">20</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">महिला पोलीस शिपाई</div></td>
-                                            <td class="col-num">99</td>
-                                            <td class="col-num">93</td>
-                                            <td class="col-num">93</td>
-                                            <td class="col-num">6</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">वाहतूक पोलीस</div></td>
-                                            <td class="col-num">58</td>
-                                            <td class="col-num">56</td>
-                                            <td class="col-num">46</td>
-                                            <td class="col-num">2</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">सर्वसाधारण दल (आम फोर्स)</div></td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">47</td>
-                                            <td class="col-num">47</td>
-                                            <td class="col-num">3</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 10 पैकी 10 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                 </div>
                 <!-- container-fluid -->

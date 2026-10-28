@@ -38,10 +38,109 @@ table,
 .btn,
 .form-control,
 .form-select {
-    font-family: "Eczar", serif;
+    /* font-family: "Eczar", serif; */
+    font-family: "Mukta", sans-serif;
 }
 
 /* Normal text */
 body {
     font-weight: 400;
+}
+
+
+/* =====================================
+   THEME COLOURS (from bandobast/index.html)
+   Colours only - no sizes, radius, spacing or shadows
+   ===================================== */
+
+/* Velzon/Bootstrap colour variables (selector beats [data-theme=default][data-theme-colors=*]) */
+html[data-theme][data-theme-colors] {
+    --vz-primary: #1d4ed8;
+    --vz-primary-rgb: 29, 78, 216;
+    --vz-primary-text-emphasis: #1e40af;
+    --vz-primary-bg-subtle: #e8efff;
+    --vz-primary-border-subtle: #c7d2fe;
+
+    --vz-success: #16a34a;
+    --vz-success-rgb: 22, 163, 74;
+    --vz-success-text-emphasis: #15803d;
+    --vz-success-bg-subtle: #e8f7ee;
+    --vz-success-border-subtle: #bbf7d0;
+
+    --vz-warning: #d97706;
+    --vz-warning-rgb: 217, 119, 6;
+    --vz-warning-text-emphasis: #b45309;
+    --vz-warning-bg-subtle: #fff4e2;
+    --vz-warning-border-subtle: #fed7aa;
+
+    --vz-danger: #dc2626;
+    --vz-danger-rgb: 220, 38, 38;
+    --vz-danger-text-emphasis: #b91c1c;
+    --vz-danger-bg-subtle: #fdecec;
+    --vz-danger-border-subtle: #fecaca;
+
+    --vz-link-color: #1d4ed8;
+    --vz-link-color-rgb: 29, 78, 216;
+    --vz-link-hover-color: #1e40af;
+}
+
+/* Light mode page colours (dark mode keeps Velzon's own colours) */
+html:not([data-bs-theme=dark])[data-theme][data-theme-colors] {
+    --vz-body-bg: #f3f5fa;
+    --vz-body-bg-rgb: 243, 245, 250;
+    --vz-body-color: #0f172a;
+    --vz-body-color-rgb: 15, 23, 42;
+    --vz-heading-color: #0f172a;
+    --vz-emphasis-color: #0f172a;
+    --vz-secondary-color: #64748b;
+    --vz-secondary-color-rgb: 100, 116, 139;
+    --vz-border-color: #e6eaf2;
+    --vz-light: #f8fafc;
+    --vz-light-rgb: 248, 250, 252;
+    --vz-header-bg: #ffffff;
+    --vz-header-border: #e6eaf2;
+    --vz-footer-bg: #ffffff;
+    --vz-footer-color: #64748b;
+}
+
+/* Sidebar - navy, gold active item */
+html[data-theme][data-sidebar=dark] {
+    --vz-vertical-menu-bg: linear-gradient(180deg, #0b1f4b, #071533);
+    --vz-vertical-menu-border: #0b1f4b;
+    --vz-vertical-menu-item-color: #cbd5e1;
+    --vz-vertical-menu-item-bg: rgba(255, 255, 255, .06);
+    --vz-vertical-menu-item-hover-color: #ffffff;
+    --vz-vertical-menu-item-active-color: #fbbf24;
+    --vz-vertical-menu-item-active-bg: rgba(245, 158, 11, .15);
+    --vz-vertical-menu-sub-item-color: #cbd5e1;
+    --vz-vertical-menu-sub-item-hover-color: #ffffff;
+    --vz-vertical-menu-sub-item-active-color: #fbbf24;
+    --vz-vertical-menu-title-color: #64748b;
+    --vz-twocolumn-menu-iconview-bg: #071533;
+}
+
+/* collapsed sidebar uses background-color, which can't take the gradient */
+html[data-sidebar=dark][data-sidebar-size=sm] .navbar-brand-box {
+    background-color: #0b1f4b !important;
+}
+
+html[data-sidebar=dark] .navbar-menu .navbar-nav .nav-link.active,
+html[data-sidebar=dark] .navbar-menu .navbar-nav .nav-link.active i {
+    color: #fbbf24;
+}
+
+.text-muted {
+    color: #64748b !important;
+}
+
+/* Table header colours */
+.table > thead > tr > th {
+    background-color: #f8fafc;
+    color: #64748b;
+}
+
+/* Focus border colour */
+.form-control:focus,
+.form-select:focus {
+    border-color: #1d4ed8;
 }

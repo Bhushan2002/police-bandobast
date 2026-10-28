@@ -14,8 +14,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">सेटिंग्ज</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">सेटिंग्ज</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -28,8 +28,8 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
-                        <div class="page-title ">
+                    <div class="d-flex justify-content-between align-items-center p-1   ">
+                        <div class="page-title">
                             <h2>सेटिंग्ज</h2>
                             <p>हजेरी नियम व आदेश लेटरहेड</p>
                         </div>

@@ -12,8 +12,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">पोलीस ठाणेनिहाय अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">पोलीस ठाणेनिहाय अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -26,21 +26,14 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-2">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title ">
                             <h2>पोलीस ठाणेनिहाय अहवाल</h2>
                             <p>प्रत्येक पोलीस ठाणेचा सारांश — तपशीलवार अहवालासाठी पोलीस ठाणेवर क्लिक करा</p>
-
                         </div>
-                        <div class=" d-flex ">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (csv)</span></button>
-
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF</span>
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
 
                     </div>
 
@@ -172,7 +165,7 @@
                                                                 <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
                                                             <span class="fs-12 fw-medium">40%</span>
-                                                           
+
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -218,7 +211,7 @@
                                                             <div class="progress flex-grow-1">
                                                                 <div class="progress-bar" role="progressbar" style="width: 19%;" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
-                                                           <span class="fs-12 fw-medium">19%</span>
+                                                            <span class="fs-12 fw-medium">19%</span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -241,7 +234,7 @@
                                                             <div class="progress flex-grow-1">
                                                                 <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
-                                                           <span class="fs-12 fw-medium">60%</span>
+                                                            <span class="fs-12 fw-medium">60%</span>
                                                         </div>
                                                     </td>
                                                 </tr>

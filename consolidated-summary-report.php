@@ -13,8 +13,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">एकत्रित सारांश अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">एकत्रित सारांश अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -27,23 +27,18 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>एकत्रित सारांश अहवाल</h2>
                             <p>सर्व निर्देशक एकाच ठिकाणी</p>
                         </div>
-                        <div class="d-flex">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (CSV)</span></button>
 
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF अहवाल</span>
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
                     </div>
 
-                    <div class="d-flex flex-wrap mx-2 align-items-center">
+                    <div class="d-flex flex-wrap  align-items-center">
                         <div class="card card-animate mx-2 flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
@@ -155,664 +150,598 @@
                     </div>
 
                     <!-- पोलीस ठाणेनिहाय -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">पोलीस ठाणेनिहाय</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-                                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
-                                        </button>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>पोलीस ठाणे</th>
+                                                    <th>मागणी</th>
+                                                    <th>स्वीकृत</th>
+                                                    <th>यादीतील नावे</th>
+                                                    <th>प्रतिसाद पू/अं/ना/प्र</th>
+                                                    <th>नियुक्त</th>
+                                                    <th>ड्युटी-दिवस</th>
+                                                    <th>उपस्थित</th>
+                                                    <th>गैरहजर</th>
+                                                    <th>नोटीस</th>
+                                                    <th>उपस्थिती %</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>229</td>
+                                                    <td>229</td>
+                                                    <td>216</td>
+                                                    <td>2/0/0/0</td>
+                                                    <td>8</td>
+                                                    <td>36</td>
+                                                    <td>7</td>
+                                                    <td>29</td>
+                                                    <td>0</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 19%;" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100">19%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>131</td>
+                                                    <td>122</td>
+                                                    <td>121</td>
+                                                    <td>1/1/0/0</td>
+                                                    <td>4</td>
+                                                    <td>20</td>
+                                                    <td>1</td>
+                                                    <td>19</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>सातारा तालुका पोलीस ठाणे</td>
+                                                    <td>60</td>
+                                                    <td>45</td>
+                                                    <td>45</td>
+                                                    <td>0/1/0/0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>कराड शहर पोलीस ठाणे</td>
+                                                    <td>70</td>
+                                                    <td>70</td>
+                                                    <td>67</td>
+                                                    <td>1/0/0/0</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>कराड तालुका पोलीस ठाणे</td>
+                                                    <td>20</td>
+                                                    <td>20</td>
+                                                    <td>20</td>
+                                                    <td>1/0/0/0</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>फलटण शहर पोलीस ठाणे</td>
+                                                    <td>60</td>
+                                                    <td>50</td>
+                                                    <td>50</td>
+                                                    <td>0/1/0/0</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>पोलीस ठाणे</th>
-                                            <th class="col-num">मागणी</th>
-                                            <th class="col-num">स्वीकृत</th>
-                                            <th class="col-num">यादीतील नावे</th>
-                                            <th class="col-num">प्रतिसाद पू/अं/ना/प्र</th>
-                                            <th class="col-num">नियुक्त</th>
-                                            <th class="col-num">ड्युटी-दिवस</th>
-                                            <th class="col-num">उपस्थित</th>
-                                            <th class="col-num">गैरहजर</th>
-                                            <th class="col-num">नोटीस</th>
-                                            <th class="min-w-sm">उपस्थिती %</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">सातारा शहर पोलीस ठाणे</div></td>
-                                            <td class="col-num">229</td>
-                                            <td class="col-num">229</td>
-                                            <td class="col-num">216</td>
-                                            <td class="col-num">2/0/0/0</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">36</td>
-                                            <td class="col-num">7</td>
-                                            <td class="col-num">29</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 19%;" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100">19%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">शाहूपुरी पोलीस ठाणे</div></td>
-                                            <td class="col-num">131</td>
-                                            <td class="col-num">122</td>
-                                            <td class="col-num">121</td>
-                                            <td class="col-num">1/1/0/0</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">20</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">19</td>
-                                            <td class="col-num">1</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">सातारा तालुका पोलीस ठाणे</div></td>
-                                            <td class="col-num">60</td>
-                                            <td class="col-num">45</td>
-                                            <td class="col-num">45</td>
-                                            <td class="col-num">0/1/0/0</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">1</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">कराड शहर पोलीस ठाणे</div></td>
-                                            <td class="col-num">70</td>
-                                            <td class="col-num">70</td>
-                                            <td class="col-num">67</td>
-                                            <td class="col-num">1/0/0/0</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">कराड तालुका पोलीस ठाणे</div></td>
-                                            <td class="col-num">20</td>
-                                            <td class="col-num">20</td>
-                                            <td class="col-num">20</td>
-                                            <td class="col-num">1/0/0/0</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">फलटण शहर पोलीस ठाणे</div></td>
-                                            <td class="col-num">60</td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">0/1/0/0</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 6 पैकी 6 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                     <!-- बंदोबस्तनिहाय -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">बंदोबस्तनिहाय</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">बंदोबस्तनिहाय</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>बंदोबस्त</th>
+                                                    <th>दिनांक</th>
+                                                    <th>स्थिती</th>
+                                                    <th>मागणी</th>
+                                                    <th>स्वीकृत</th>
+                                                    <th>नियुक्त</th>
+                                                    <th>ड्युटी-दिवस</th>
+                                                    <th>उपस्थित</th>
+                                                    <th>गैरहजर</th>
+                                                    <th>%</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                    <td>10 ऑक्टो, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td>120</td>
+                                                    <td>111</td>
+                                                    <td>8</td>
+                                                    <td>48</td>
+                                                    <td>4</td>
+                                                    <td>44</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">8%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>व्हीआयपी दौरा – कराड</td>
+                                                    <td>18 ऑक्टो, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td>90</td>
+                                                    <td>90</td>
+                                                    <td>3</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>दसरा मिरवणूक – फलटण</td>
+                                                    <td>20 ऑक्टो, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td>60</td>
+                                                    <td>50</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</td>
+                                                    <td>25 सप्टें, 2026</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">मंजूर</span>
+                                                    </td>
+                                                    <td>300</td>
+                                                    <td>285</td>
+                                                    <td>5</td>
+                                                    <td>10</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <div class="progress" style="min-width: 140px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>बंदोबस्त</th>
-                                            <th>दिनांक</th>
-                                            <th>स्थिती</th>
-                                            <th class="col-num">मागणी</th>
-                                            <th class="col-num">स्वीकृत</th>
-                                            <th class="col-num">नियुक्त</th>
-                                            <th class="col-num">ड्युटी-दिवस</th>
-                                            <th class="col-num">उपस्थित</th>
-                                            <th class="col-num">गैरहजर</th>
-                                            <th class="min-w-sm">%</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">नवरात्रोत्सव बंदोबस्त – सातारा शहर</div></td>
-                                            <td class="text-nowrap">10 ऑक्टो, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">120</td>
-                                            <td class="col-num">111</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">48</td>
-                                            <td class="col-num">4</td>
-                                            <td class="col-num">44</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">8%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">व्हीआयपी दौरा – कराड</div></td>
-                                            <td class="text-nowrap">18 ऑक्टो, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">90</td>
-                                            <td class="col-num">90</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">दसरा मिरवणूक – फलटण</div></td>
-                                            <td class="text-nowrap">20 ऑक्टो, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">60</td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">गणेशोत्सव विसर्जन बंदोबस्त 2026 – सातारा</div></td>
-                                            <td class="text-nowrap">25 सप्टें, 2026</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">मंजूर</span></td>
-                                            <td class="col-num">300</td>
-                                            <td class="col-num">285</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">10</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">5</td>
-                                            <td>
-                                                <div class="progress" style="min-width: 140px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 4 पैकी 4 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                     <!-- प्रवर्गनिहाय मनुष्यबळ -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">प्रवर्गनिहाय मनुष्यबळ</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">प्रवर्गनिहाय मनुष्यबळ</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>प्रवर्ग</th>
+                                                    <th>मागणी</th>
+                                                    <th>स्वीकृत</th>
+                                                    <th>यादीतील नावे</th>
+                                                    <th>तूट</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>वरिष्ठ अधिकारी</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>पोलीस उपायुक्त (DCP)</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>वरिष्ठ पोलीस निरीक्षक</td>
+                                                    <td>6</td>
+                                                    <td>6</td>
+                                                    <td>5</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>पोलीस निरीक्षक</td>
+                                                    <td>12</td>
+                                                    <td>12</td>
+                                                    <td>11</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>सहायक पोलीस निरीक्षक</td>
+                                                    <td>19</td>
+                                                    <td>19</td>
+                                                    <td>17</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>पोलीस हवालदार</td>
+                                                    <td>59</td>
+                                                    <td>56</td>
+                                                    <td>56</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>पुरुष पोलीस शिपाई</td>
+                                                    <td>250</td>
+                                                    <td>230</td>
+                                                    <td>230</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>महिला पोलीस शिपाई</td>
+                                                    <td>99</td>
+                                                    <td>93</td>
+                                                    <td>93</td>
+                                                    <td>6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>वाहतूक पोलीस</td>
+                                                    <td>58</td>
+                                                    <td>56</td>
+                                                    <td>46</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>सर्वसाधारण दल (आम फोर्स)</td>
+                                                    <td>50</td>
+                                                    <td>47</td>
+                                                    <td>47</td>
+                                                    <td>3</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>प्रवर्ग</th>
-                                            <th class="col-num">मागणी</th>
-                                            <th class="col-num">स्वीकृत</th>
-                                            <th class="col-num">यादीतील नावे</th>
-                                            <th class="col-num">तूट</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">वरिष्ठ अधिकारी</div></td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पोलीस उपायुक्त (DCP)</div></td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">वरिष्ठ पोलीस निरीक्षक</div></td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पोलीस निरीक्षक</div></td>
-                                            <td class="col-num">12</td>
-                                            <td class="col-num">12</td>
-                                            <td class="col-num">11</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">सहायक पोलीस निरीक्षक</div></td>
-                                            <td class="col-num">19</td>
-                                            <td class="col-num">19</td>
-                                            <td class="col-num">17</td>
-                                            <td class="col-num">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पोलीस हवालदार</div></td>
-                                            <td class="col-num">59</td>
-                                            <td class="col-num">56</td>
-                                            <td class="col-num">56</td>
-                                            <td class="col-num">3</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">पुरुष पोलीस शिपाई</div></td>
-                                            <td class="col-num">250</td>
-                                            <td class="col-num">230</td>
-                                            <td class="col-num">230</td>
-                                            <td class="col-num">20</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">महिला पोलीस शिपाई</div></td>
-                                            <td class="col-num">99</td>
-                                            <td class="col-num">93</td>
-                                            <td class="col-num">93</td>
-                                            <td class="col-num">6</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">वाहतूक पोलीस</div></td>
-                                            <td class="col-num">58</td>
-                                            <td class="col-num">56</td>
-                                            <td class="col-num">46</td>
-                                            <td class="col-num">2</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">सर्वसाधारण दल (आम फोर्स)</div></td>
-                                            <td class="col-num">50</td>
-                                            <td class="col-num">47</td>
-                                            <td class="col-num">47</td>
-                                            <td class="col-num">3</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 10 पैकी 10 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                     <!-- कर्मचारीनिहाय हजेरी -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">कर्मचारीनिहाय हजेरी</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">कर्मचारीनिहाय हजेरी</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>कर्मचारी</th>
+                                                    <th>बक्कल</th>
+                                                    <th>पोलीस ठाणे</th>
+                                                    <th>ड्युटी-दिवस</th>
+                                                    <th>उपस्थित</th>
+                                                    <th>गैरहजर</th>
+                                                    <th>चेहरा जुळणी</th>
+                                                    <th>नोटीस / कार्यवाही</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>अनिल यादव</td>
+                                                    <td>10163</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>6</td>
+                                                    <td>0</td>
+                                                    <td>6</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>प्रशांत घाडगे</td>
+                                                    <td>10008</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>6</td>
+                                                    <td>0</td>
+                                                    <td>6</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>प्रिया मोरे</td>
+                                                    <td>7012</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>6</td>
+                                                    <td>0</td>
+                                                    <td>6</td>
+                                                    <td>—</td>
+                                                    <td>खुलासा प्रलंबित</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>स्वप्नील शिंदे</td>
+                                                    <td>10007</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>6</td>
+                                                    <td>0</td>
+                                                    <td>6</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>अमोल कदम</td>
+                                                    <td>6734</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>5</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>गणेश भोसले</td>
+                                                    <td>2208</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>6</td>
+                                                    <td>1</td>
+                                                    <td>5</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>महेश घोरपडे</td>
+                                                    <td>4410</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>6</td>
+                                                    <td>1</td>
+                                                    <td>5</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>संतोष पवार</td>
+                                                    <td>4521</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>5</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>अक्षय कदम</td>
+                                                    <td>10009</td>
+                                                    <td>सातारा शहर पोलीस ठाणे</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>2</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>हेमंत पाटील</td>
+                                                    <td>10164</td>
+                                                    <td>शाहूपुरी पोलीस ठाणे</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>2</td>
+                                                    <td>—</td>
+                                                    <td>—</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>कर्मचारी</th>
-                                            <th class="col-num">बक्कल</th>
-                                            <th>पोलीस ठाणे</th>
-                                            <th class="col-num">ड्युटी-दिवस</th>
-                                            <th class="col-num">उपस्थित</th>
-                                            <th class="col-num">गैरहजर</th>
-                                            <th class="col-num">चेहरा जुळणी</th>
-                                            <th>नोटीस / कार्यवाही</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="cell-title">अनिल यादव</div></td>
-                                            <td class="col-num">10163</td>
-                                            <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">प्रशांत घाडगे</div></td>
-                                            <td class="col-num">10008</td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">प्रिया मोरे</div></td>
-                                            <td class="col-num">7012</td>
-                                            <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">—</td>
-                                            <td>खुलासा प्रलंबित</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">स्वप्नील शिंदे</div></td>
-                                            <td class="col-num">10007</td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">अमोल कदम</div></td>
-                                            <td class="col-num">6734</td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">गणेश भोसले</div></td>
-                                            <td class="col-num">2208</td>
-                                            <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">महेश घोरपडे</div></td>
-                                            <td class="col-num">4410</td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">6</td>
-                                            <td class="col-num">1</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">संतोष पवार</div></td>
-                                            <td class="col-num">4521</td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">8</td>
-                                            <td class="col-num">3</td>
-                                            <td class="col-num">5</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">अक्षय कदम</div></td>
-                                            <td class="col-num">10009</td>
-                                            <td>सातारा शहर पोलीस ठाणे</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell-title">हेमंत पाटील</div></td>
-                                            <td class="col-num">10164</td>
-                                            <td>शाहूपुरी पोलीस ठाणे</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">0</td>
-                                            <td class="col-num">2</td>
-                                            <td class="col-num">—</td>
-                                            <td>—</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 10 पैकी 10 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                     <!-- कारणे दाखवा नोटीस -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-md">
-                                    <h5 class="card-title mb-0">कारणे दाखवा नोटीस</h5>
+                    <!-- data table -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">कारणे दाखवा नोटीस</h5>
+                                    </div>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <?php
-                                        $placeholder = "शोधा…";
-                                        include 'component/search-input.php'; ?>
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                            aria-describedby="model-datatables_info">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                    <th>जा. क्र.</th>
+                                                    <th>कर्मचारी</th>
+                                                    <th>गैरहजर दिनांक</th>
+                                                    <th>जारी करणारे</th>
+                                                    <th>स्थिती</th>
+                                                    <th>खुलासा</th>
+                                                    <th>कार्यवाही</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>सा.पो./कानो/2026/001</td>
+                                                    <td>अश्विनी जगताप</td>
+                                                    <td>25 सप्टें, 2026</td>
+                                                    <td>विजय मोहिते</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-success-subtle text-success">कार्यवाही पूर्ण</span>
+                                                    </td>
+                                                    <td>प्राप्त</td>
+                                                    <td>ताकीद (समज) देऊन बंद</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>सा.पो./कानो/2026/002</td>
+                                                    <td>प्रिया मोरे</td>
+                                                    <td>10 ऑक्टो, 2026</td>
+                                                    <td>राहुल शिंदे</td>
+                                                    <td class="text-center align-middle">
+                                                        <span class="badge bg-warning-subtle text-warning">खुलासा प्रलंबित</span>
+                                                    </td>
+                                                    <td>नाही</td>
+                                                    <td>—</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>जा. क्र.</th>
-                                            <th>कर्मचारी</th>
-                                            <th>गैरहजर दिनांक</th>
-                                            <th>जारी करणारे</th>
-                                            <th>स्थिती</th>
-                                            <th class="col-num">खुलासा</th>
-                                            <th>कार्यवाही</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-nowrap">सा.पो./कानो/2026/001</td>
-                                            <td><div class="cell-title">अश्विनी जगताप</div></td>
-                                            <td class="text-nowrap">25 सप्टें, 2026</td>
-                                            <td>विजय मोहिते</td>
-                                            <td><span class="badge rounded-pill bg-success-subtle text-success">कार्यवाही पूर्ण</span></td>
-                                            <td class="col-num">प्राप्त</td>
-                                            <td>ताकीद (समज) देऊन बंद</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-nowrap">सा.पो./कानो/2026/002</td>
-                                            <td><div class="cell-title">प्रिया मोरे</div></td>
-                                            <td class="text-nowrap">10 ऑक्टो, 2026</td>
-                                            <td>राहुल शिंदे</td>
-                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">खुलासा प्रलंबित</span></td>
-                                            <td class="col-num">नाही</td>
-                                            <td>—</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="noresult text-center py-4 d-none">
-                                    <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <div class="row align-items-center g-2">
-                                <div class="col-sm">
-                                    <div class="text-muted">नोंदी 1 ते 2 पैकी 2 दर्शवत आहे</div>
-                                </div>
-                                <div class="col-sm-auto">
-                                    <ul class="pagination pagination-separated mb-0">
-                                        <li class="page-item disabled"><a href="#" class="page-link">मागील</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">पुढील</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div><!--end row-->
 
                     <!-- नोटीसवरील कार्यवाही — सारांश -->
                     <div class="card p-3">
                         <div class="px-2">
                             <h4 class="page-title mb-3">नोटीसवरील कार्यवाही — सारांश</h4>
-                                <div class="d-flex align-items-center gap-3 mb-2">
-                                    <span class="flex-shrink-0" style="min-width: 200px;">ताकीद (समज) देऊन बंद</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <b class="flex-shrink-0">1</b>
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <span class="flex-shrink-0" style="min-width: 200px;">ताकीद (समज) देऊन बंद</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
+                                <b class="flex-shrink-0">1</b>
+                            </div>
                         </div>
                     </div>
 

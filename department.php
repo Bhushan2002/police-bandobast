@@ -109,7 +109,7 @@
                                                             <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                             <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                             <li>
-                                                                <a class="dropdown-item remove-item-btn">
+                                                                <a class="dropdown-item remove-item-btn sa-warning">
                                                                     <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                 </a>
                                                             </li>
@@ -131,7 +131,7 @@
                                                             <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                             <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                             <li>
-                                                                <a class="dropdown-item remove-item-btn">
+                                                                <a class="dropdown-item remove-item-btn sa-warning">
                                                                     <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                 </a>
                                                             </li>
@@ -152,7 +152,7 @@
                                                             <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                             <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                             <li>
-                                                                <a class="dropdown-item remove-item-btn">
+                                                                <a class="dropdown-item remove-item-btn sa-warning">
                                                                     <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                 </a>
                                                             </li>
@@ -173,7 +173,7 @@
                                                             <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                             <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                             <li>
-                                                                <a class="dropdown-item remove-item-btn">
+                                                                <a class="dropdown-item remove-item-btn sa-warning">
                                                                     <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                 </a>
                                                             </li>

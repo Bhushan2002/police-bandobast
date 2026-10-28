@@ -12,8 +12,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">बंदोबस्तनिहाय अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">बंदोबस्तनिहाय अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -26,26 +26,18 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title ">
                             <h2>बंदोबस्तनिहाय अहवाल</h2>
                             <p>प्रत्येक बंदोबस्ताचा सारांश — तपशीलवार अहवालासाठी बंदोबस्तावर क्लिक करा</p>
-
                         </div>
-                        <div class=" d-flex ">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (csv)</span></button>
-
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF</span>
-                            </button>
-                        </div>
-
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
                     </div>
 
-                    <div class="d-flex mx-2 align-items-center">
-                        <div class="card card-animate mx-2 flex-fill">
+                    <div class="d-flex mx-1 align-items-center">
+                        <div class="card card-animate  flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar-sm flex-shrink-0 me-3">

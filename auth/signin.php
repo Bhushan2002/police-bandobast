@@ -30,7 +30,7 @@
 <body>
 
     <!-- auth-page wrapper -->
-    <div class="auth-page-wrapper  py-5 d-flex justify-content-center align-items-center flex-column min-vh-100">
+    <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center flex-column min-vh-100">
         <!-- <div class="bg-overlay"></div> -->
         <!-- auth-page content -->
         <div class="auth-page-content overflow-hidden pt-lg-5">
@@ -44,9 +44,9 @@
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex justify-content-center align-items-center flex-column">
                                             <div class="mb-4">
-                                                <a href="index.html" class="d-block">
-                                                    <img src="../assets/images/logo.png" alt="" height="80">
-                                                </a>
+
+                                                <img src="../assets/images/logo.png" alt="" height="80">
+
                                             </div>
                                             <div class="">
                                                 <h3 class="page-title text-white">
@@ -54,7 +54,7 @@
                                                 </h3>
                                                 <p class="page-title text-white fs-12">Police Bandobast Management System</p>
                                             </div>
-                                           
+
                                         </div>
                                     </div>
                                 </div>

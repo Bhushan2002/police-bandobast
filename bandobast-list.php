@@ -130,7 +130,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -169,7 +169,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मंजूर करा">
                                                                 <i class="ri-check-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -204,7 +204,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -240,7 +240,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -276,7 +276,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="संपादित करा">
                                                                 <i class="ri-pencil-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -312,7 +312,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -433,7 +433,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मंजूर करा">
                                                                 <i class="ri-check-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -551,7 +551,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -586,7 +586,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -622,7 +622,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -658,7 +658,7 @@
                                                             <button type="button" class="btn btn-ghost-success btn-icon btn-action" title="मनुष्यबळ नियुक्त करा">
                                                                 <i class="ri-group-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>
@@ -776,7 +776,7 @@
                                                             <button type="button" class="btn btn-ghost-primary btn-icon btn-action" title="संपादित करा">
                                                                 <i class="ri-pencil-line"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete" title="हटवा">
+                                                            <button type="button" class="btn btn-ghost-danger btn-icon btn-action btn-delete sa-warning" title="हटवा">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </button>
                                                         </div>

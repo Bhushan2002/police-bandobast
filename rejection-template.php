@@ -13,8 +13,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">निर्णय / कारण नमुने</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">निर्णय / कारण नमुने</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -27,11 +27,11 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title ">
                             <h2>निर्णय / कारण नमुने</h2>
                             <p>निर्णय आणि कारणांचे नमुने</p>
-                        </div>
+                    </div>
                         <button type="button" class="btn btn-primary waves-effect waves-light d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addVibhagModal">
                             <span class="mdi mdi-plus"></span>
                             <span class="px-2">निर्णय / कारण नमुने जोडा</span>
@@ -149,7 +149,7 @@
                                                                 <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                                 <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                                 <li>
-                                                                    <a class="dropdown-item remove-item-btn">
+                                                                    <a class="dropdown-item remove-item-btn sa-warning">
                                                                         <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                     </a>
                                                                 </li>
@@ -175,7 +175,7 @@
                                                                 <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                                 <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                                 <li>
-                                                                    <a class="dropdown-item remove-item-btn">
+                                                                    <a class="dropdown-item remove-item-btn sa-warning">
                                                                         <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                     </a>
                                                                 </li>
@@ -201,7 +201,7 @@
                                                                 <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                                 <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                                 <li>
-                                                                    <a class="dropdown-item remove-item-btn">
+                                                                    <a class="dropdown-item remove-item-btn sa-warning">
                                                                         <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                     </a>
                                                                 </li>
@@ -227,7 +227,7 @@
                                                                 <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                                 <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                                 <li>
-                                                                    <a class="dropdown-item remove-item-btn">
+                                                                    <a class="dropdown-item remove-item-btn sa-warning">
                                                                         <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                     </a>
                                                                 </li>
@@ -253,7 +253,7 @@
                                                                 <li><a href="#!" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
                                                                 <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
                                                                 <li>
-                                                                    <a class="dropdown-item remove-item-btn">
+                                                                    <a class="dropdown-item remove-item-btn sa-warning">
                                                                         <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
                                                                     </a>
                                                                 </li>

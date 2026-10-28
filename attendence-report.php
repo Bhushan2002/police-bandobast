@@ -21,8 +21,8 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">हजेरी अहवाल</h4>
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-end bg-galaxy-transparent">
+                                <!-- <h4 class="mb-sm-0">हजेरी अहवाल</h4> -->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -35,25 +35,21 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex justify-content-between align-items-center p-1">
                         <div class="page-title">
                             <h2>हजेरी अहवाल</h2>
                             <p>दिनांकनिहाय, कर्मचारीनिहाय व दैनंदिन हजेरी नोंदी (चेहरा पडताळणी व GPS सह)</p>
                         </div>
-                        <div class="d-flex">
-                            <button type="button" class="btn btn-soft-secondary waves-effect material-shadow-none"> <span class="ri-file-excel-line"></span>
-                                <span class="px-2">Excel (CSV)</span></button>
 
-                            <button type="button" class="btn btn-secondary waves-effect waves-light d-flex align-items-center mx-1" data-bs-toggle="modal">
-                                <span class="ri-file-pdf-line"></span>
-                                <span class="px-2">PDF अहवाल</span>
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-soft-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            <i class="ri-filter-3-line align-bottom me-1"></i> फिल्टर
+                        </button>
+
                     </div>
 
 
-                    <div class="d-flex mx-2 align-items-center">
-                        <div class="card card-animate mx-2 flex-fill">
+                    <div class="d-flex mx-1 align-items-center">
+                        <div class="card card-animate flex-fill">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar-sm flex-shrink-0 me-3">
@@ -131,7 +127,7 @@
                                     <thead class="table-light">
                                         <tr>
                                             <th>दिनांक</th>
-                                            <th >नियुक्त</th>
+                                            <th>नियुक्त</th>
                                             <th>उपस्थित</th>
                                             <th>गैरहजर</th>
                                             <th>आज बाकी</th>
@@ -141,10 +137,10 @@
                                     <tbody>
                                         <tr>
                                             <td>25 सप्टें, 2026</td>
-                                            <td >5</td>
-                                            <td >2</td>
-                                            <td >3</td>
-                                            <td >0</td>
+                                            <td>5</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>0</td>
                                             <td>
                                                 <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
@@ -230,7 +226,7 @@
                                             <td>0</td>
                                             <td>8</td>
                                             <td>
-                                                 <div class="progress" style="min-width: 140px;">
+                                                <div class="progress" style="min-width: 140px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                                                 </div>
                                             </td>
@@ -242,7 +238,7 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
 
                     <!-- कर्मचारीनिहाय हजेरी -->
@@ -256,7 +252,7 @@
                         </div>
                         <div class="card-body p-2">
                             <div class="table-responsive">
-                                <table id="buttons-datatables" class="table table-bordered nowrap align-middle dataTable no-footer dtr-inline collapsed">
+                                <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed">
                                     <thead class="table-light">
                                         <tr>
                                             <th>कर्मचारी</th>
@@ -332,7 +328,7 @@
                                         </tr>
                                         <tr>
                                             <td>महेश घोरपडे</td>
-                                            <td >4410</td>
+                                            <td>4410</td>
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>5</td>
                                             <td>1</td>
@@ -356,8 +352,8 @@
                                             <td>सातारा शहर पोलीस ठाणे</td>
                                             <td>2</td>
                                             <td>0</td>
-                                            <td >2</td>
-                                            <td >—</td>
+                                            <td>2</td>
+                                            <td>—</td>
                                             <td>—</td>
                                         </tr>
                                         <tr>
@@ -386,18 +382,12 @@
                                 <div class="col-md">
                                     <h5 class="card-title mb-0">दैनंदिन हजेरी नोंदी</h5>
                                 </div>
-                                <div class="col-md-auto">
-                                    <div class="d-flex flex-wrap align-items-center gap-2">
-                                        <button type="button" class="btn btn-soft-secondary">
-                                            <i class="ri-download-line align-bottom me-1"></i> CSV
-                                        </button>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">
-                                <table class="table data-table align-middle mb-0">
+                                <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed">
                                     <thead class="table-light">
                                         <tr>
                                             <th>दिनांक</th>

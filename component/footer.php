@@ -48,6 +48,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
 
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script>
+        // Delete confirmation for every table delete button (.sa-warning); delegated so DataTables paging/redraws still work
+        document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.sa-warning');
+            if (!btn) return;
+            e.preventDefault();
+            Swal.fire({
+                title: 'नोंद हटवायची आहे का?',
+                text: 'ही नोंद कायमची हटवली जाईल. ही क्रिया परत घेता येणार नाही.',
+                icon: 'warning',
+                showCancelButton: true,
+                customClass: {
+                    confirmButton: 'btn btn-danger w-xs me-2 mt-2',
+                    cancelButton: 'btn btn-light w-xs mt-2'
+                },
+                confirmButtonText: 'होय, हटवा',
+                cancelButtonText: 'रद्द करा',
+                buttonsStyling: false,
+                showCloseButton: true
+            }).then(function(result) {
+                if (result.value) {
+                    Swal.fire({
+                        title: 'हटवले!',
+                        text: 'नोंद हटवली आहे.',
+                        icon: 'success',
+                        customClass: {
+                            confirmButton: 'btn btn-primary w-xs mt-2'
+                        },
+                        confirmButtonText: 'ठीक आहे',
+                        buttonsStyling: false
+                    });
+                }
+            });
+        });
+    </script>
+
     <!-- App js (sidebar toggle, active menu) -->
     <script src="assets/js/app.js"></script>
 </footer>

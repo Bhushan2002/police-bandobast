@@ -27,7 +27,7 @@
                                     </div>
 
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center p-3">
+                                <div class="d-flex justify-content-between align-items-center p-1">
                                     <div class="page-title">
                                         <h2>कार्यवाही पूर्ण</h2>
                                         <p>ही नोटीस कार्यवाही पूर्ण झालेली आहे</p>
@@ -44,68 +44,58 @@
                         </div>
                         <!-- start page title end -->
 
-                        <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <?php include 'component/search-input.php'; ?>
-                                <button type="button" class="btn btn-soft-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#filterPanel" aria-expanded="false" aria-controls="filterPanel">
-                                    <i class="ri-filter-3-line align-bottom me-1"></i> Filters
-                                </button>
+                        <!-- data table -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
 
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table data-table align-middle mb-0">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th>कर्मचारी</th>
-                                                <th>पोलीस ठाणे</th>
-                                                <th>बंदोबस्त</th>
-                                                <th>दिनांक</th>
-                                                <th>ड्युटी पॉइंट</th>
-                                                <th class="text-end">कृती</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="fw-semibold">संतोष पवार</div>
-                                                    <small class="text-muted">पोलीस हवालदार · बक्कल 4521</small>
-                                                </td>
-                                                <td>सातारा शहर पोलीस ठाणे</td>
-                                                <td>
-                                                    <div>नवरात्रोत्सव बंदोबस्त – सातारा शहर</div>
-                                                    <small class="text-muted">सा.पो./बंदोबस्त/2026/B6</small>
-                                                </td>
-                                                <td>
-                                                    <span class="badge rounded-pill bg-success-subtle text-success"><i class="mdi mdi-circle-medium"></i>कार्यवाही पूर्ण</span>
-                                                    <div><small class="text-muted">09 ऑक्टो, 2026</small></div>
-                                                </td>
-                                                <td>राजवाडा चौक – मुख्य प्रवेशद्वार</td>
-                                                <td class="text-end">
-                                                    <button type="button" class="btn btn-soft-primary btn-sm waves-effect text-nowrap">
-                                                        <i class="ri-eye-line align-bottom me-1"></i> पहा
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="noresult text-center py-4 d-none">
-                                        <p class="text-muted mb-0">कोणतीही नोंद आढळली नाही.</p>
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="card-title mb-0">कार्यवाही पूर्ण</h5>
+                                            <button type="button" class="btn btn-soft-primary" data-bs-toggle="collapse"
+                                                data-bs-target="#filterPanel" aria-expanded="false" aria-controls="filterPanel">
+                                                <i class="ri-filter-3-line align-bottom me-1"></i> Filters
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table id="buttons-datatables" class="table table-bordered nowrap table-striped align-middle dataTable no-footer dtr-inline collapsed"
+                                                aria-describedby="model-datatables_info">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="model-datatables" rowspan="1" colspan="1" style="width: 52.8px;" aria-sort="ascending" aria-label="SR No.: activate to sort column descending">अ.क्र.</th>
+                                                        <th>दिनांक</th>
+                                                        <th>कर्मचारी</th>
+                                                        <th>बक्कल</th>
+                                                        <th>पोलीस ठाणे</th>
+                                                        <th>बंदोबस्त</th>
+                                                        <th>ड्युटी पॉइंट</th>
+                                                        <th>कृती</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>09 ऑक्टो, 2026</td>
+                                                        <td>संतोष पवार</td>
+                                                        <td>4521</td>
+                                                        <td>सातारा शहर पोलीस ठाणे</td>
+                                                        <td>नवरात्रोत्सव बंदोबस्त – सातारा शहर</td>
+                                                        <td>राजवाडा चौक – मुख्य प्रवेशद्वार</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-soft-primary btn-sm waves-effect text-nowrap">
+                                                                <i class="ri-eye-line align-bottom me-1"></i> पहा
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer bg-transparent">
-                                <div class="row align-items-center g-2">
-                                    <div class="col-sm">
-                                        <div class="text-muted"></div>
-                                    </div>
-                                    <div class="col-sm-auto">
-                                        <ul class="pagination pagination-separated mb-0"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div><!--end row-->
 
                         <!-- New Notice Modal -->
                         <div class="modal fade" id="addNoticeModal" tabindex="-1" aria-labelledby="addNoticeModalLabel" aria-hidden="true">
